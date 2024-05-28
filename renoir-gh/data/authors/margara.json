@@ -1,0 +1,9 @@
+{
+    "name": "Alessandro Margara",
+    "image" : "img/margara.jpg",
+    "bio": "Advisor",
+    "social": [
+        { "email": "mailto:alessandro.margara@polimi.it" },
+        { "github": "https://github.com/margara" }
+    ]
+}

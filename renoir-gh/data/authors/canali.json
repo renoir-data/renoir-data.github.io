@@ -1,0 +1,9 @@
+{
+    "name": "Davide Canali",
+    "image" : "img/canali.jpg",
+    "bio": "CEO",
+    "social": [
+        { "email": "mailto:davide.canali@mail.polimi.it" },
+        { "github": "https://github.com/canaliDavide" }
+    ]
+}

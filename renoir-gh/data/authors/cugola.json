@@ -1,0 +1,9 @@
+{
+    "name": "Gianpaolo Saverio Cugola",
+    "image" : "img/cugola.jpg",
+    "bio": "Advisor",
+    "social": [
+        { "email": "mailto:gianpaolo.cugola@polimi.it" },
+        { "github": "https://github.com/cugola" }
+    ]
+}

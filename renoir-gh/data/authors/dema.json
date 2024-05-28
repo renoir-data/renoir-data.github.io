@@ -1,0 +1,9 @@
+{
+    "name": "Luca De Martini",
+    "image" : "img/demartini.jpg",
+    "bio": "CTO",
+    "social": [
+        { "email": "mailto:luca.demartini@polimi.it" },
+        { "github": "https://github.com/imDema" }
+    ]
+}
