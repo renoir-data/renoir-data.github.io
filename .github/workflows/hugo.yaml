@@ -45,10 +45,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Git Submodule Update
-        run: |
-          git pull --recurse-submodules
-          git submodule update --remote --recursive
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -60,6 +56,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
           TZ: America/Los_Angeles
+        working-directory: ./renoir-gh
         run: |
           hugo \
             --gc \
@@ -68,7 +65,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./renoir-gh/public
 
   # Deployment job
   deploy:
