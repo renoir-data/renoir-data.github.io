@@ -20,7 +20,7 @@ logo = "logo.png"
 disableImageOptimization = false
 disableTextInHeader = false
 
-# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
+defaultBackgroundImage = "img/home-background.jpg" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 # highlightCurrentMenuArea = true
@@ -28,7 +28,7 @@ disableTextInHeader = false
 # smartTOCHideUnfocusedChildren = true
 
 [header]
-  layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+  layout = "fixed-gradient" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
 
 [footer]
   showMenu = true
@@ -40,26 +40,26 @@ disableTextInHeader = false
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
   homepageImage = "img/home-background.jpg" # used in: hero, and card
-  showRecent = false
+  showRecent = true
   showRecentItems = 5
-  showMoreLink = false
+  showMoreLink = true
   showMoreLinkDest = "/posts"
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = false # only used when layout equals background
+  layoutBackgroundBlur = true # only used when layout equals background
 
 [article]
-  showDate = true
+  showDate = false
   showViews = false
   showLikes = false
   showDateOnlyInArticle = false
   showDateUpdated = false
-  showAuthor = true
+  showAuthor = false
   # showAuthorBottom = false
-  showHero = false
-  # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
   showBreadcrumbs = false
   showDraftLabel = true
   showEdit = false
@@ -70,28 +70,28 @@ disableTextInHeader = false
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = false
-  # showRelatedContent = false
-  # relatedContentLimit = 3
+  showTableOfContents = true
+  showRelatedContent = true
+  relatedContentLimit = 3
   showTaxonomies = false
   showAuthorsBadges = false
   showWordCount = true
   # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
-  showZenMode = false
+  showZenMode = true
 
 [list]
-  showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
-  showBreadcrumbs = false
+  layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
+  showBreadcrumbs = true
   showSummary = false
   showViews = false
   showLikes = false
   showTableOfContents = false
-  showCards = false
-  groupByYear = true
-  cardView = false
+  showCards = true
+  groupByYear = false
+  cardView = true
   cardViewScreenWidth = false
   constrainItemsWidth = false
 
