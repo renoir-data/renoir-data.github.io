@@ -1,4 +1,4 @@
-renoir-gh/public/
-renoir-gh/resources/
-renoir-gh/.hugo_build.lock
+/public/
+/resources/
+.hugo_build.lock
 .obsidian/
