@@ -21,13 +21,18 @@
  weight = 10
 
 [[main]]
+ name = "Publications"
+ pageRef = "/publications"
+ weight = 20
+
+[[main]]
  name = "Reference"
  url = "https://deib-polimi.github.io/renoir/renoir/"
  weight = 20
 
 [[main]]
  name = "About"
- pageRef = "about"
+ pageRef = "/about"
  weight = 10
 
 #[[main]]

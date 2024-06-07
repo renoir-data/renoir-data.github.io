@@ -23,15 +23,13 @@ $ cargo add renoir
 {{< /typeit >}}
 ```
 
-
-## Publications
-
-📜 [Preprint](https://arxiv.org/abs/2306.04421)
-
-[2022 -- Analysis of market data with Noir: DEBS grand challenge](https://dl.acm.org/doi/10.1145/3524860.3539646)
-
-[2024 -- Safe Shared State in Dataflow Systems](https://doi.org/10.1145/3629104.3666029)
+{{< list
+  title="Publications"
+  value="publications"
+  cardView=true
+  where="Type"
+  limit=6
+>}}
 
 ## Team
-
 
