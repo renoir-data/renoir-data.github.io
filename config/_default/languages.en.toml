@@ -15,7 +15,7 @@ title = "Renoir"
 
 [author]
   name = "Renoir"
-  image = "logo.png"
+  image = "logo-1024.png"
   headline = "REactive Network of Operators in Rust"
   bio = "Give value to your data with Renoir, the efficient platform that grows with your business, lowering operational and development costs."
   links = [
