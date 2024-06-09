@@ -15,7 +15,7 @@ enableCodeCopy = false
 # mainSections = ["section1", "section2"]
 # robots = ""
 
-logo = "logo-512.png"
+logo = "logo-1024.png"
 
 disableImageOptimization = false
 disableTextInHeader = false
