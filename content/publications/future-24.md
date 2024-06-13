@@ -1,8 +1,8 @@
 ---
 title: "The Renoir Dataflow Platform: Efficient Data Processing without Complexity
-(Preprint 2024)"
+(FGCS 2024)"
 date: 2024
-externalUrl: "https://arxiv.org/abs/2306.04421"
+externalUrl: "https://doi.org/10.1016/j.future.2024.06.018"
 draft: false
 _build:
   render: "false"
