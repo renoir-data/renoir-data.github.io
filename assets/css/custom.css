@@ -1,34 +1,8 @@
 .gradient-text {
     background: linear-gradient(to right, 
                                 rgb(var(--color-neutral-100)),
-                                var(--color-brush-600));
+                                rgb(var(--color-secondary-600)));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-:root{
-    --color-renoir-50: #fbf5fe;
-    --color-renoir-100: #f6ebfc;
-    --color-renoir-200: #ecd6f8;
-    --color-renoir-300: #e0b6f1;
-    --color-renoir-400: #ce8ae8;
-    --color-renoir-500: #af4ad4;
-    --color-renoir-600: #9c3dbc;
-    --color-renoir-700: #83309b;
-    --color-renoir-800: #6d297f;
-    --color-renoir-900: #5c2669;
-    --color-renoir-950: #3a0e44;
-
-
-    --color-brush-50: #eafff6;
-    --color-brush-100: #ccffe8;
-    --color-brush-200: #9dfdd7;
-    --color-brush-300: #5ef7c4;
-    --color-brush-400: #26e9af;
-    --color-brush-500: #00d097;
-    --color-brush-600: #00a97b;
-    --color-brush-700: #008867;
-    --color-brush-800: #006b52;
-    --color-brush-900: #005846;
-    --color-brush-950: #003228;
 }

@@ -2247,9 +2247,9 @@ select {
   --tw-gradient-from-position:60%
 }
 
-.via-renoir-300 {
-  --tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops:var(--tw-gradient-from), var(--color-renoir-300) var(--tw-gradient-via-position), var(--tw-gradient-to)
+.via-primary-300 {
+  --tw-gradient-to:rgba(var(--color-primary-300), 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops:var(--tw-gradient-from), rgba(var(--color-primary-300), 1) var(--tw-gradient-via-position), var(--tw-gradient-to)
 }
 
 .to-neutral {
@@ -2260,16 +2260,16 @@ select {
   --tw-gradient-to:rgba(var(--color-neutral-100), 1) var(--tw-gradient-to-position)
 }
 
-.to-renoir-600 {
-  --tw-gradient-to:var(--color-renoir-600) var(--tw-gradient-to-position)
-}
-
 .to-secondary-600 {
   --tw-gradient-to:rgba(var(--color-secondary-600), 1) var(--tw-gradient-to-position)
 }
 
 .to-transparent {
   --tw-gradient-to:transparent var(--tw-gradient-to-position)
+}
+
+.to-primary-600 {
+  --tw-gradient-to:rgba(var(--color-primary-600), 1) var(--tw-gradient-to-position)
 }
 
 .to-70\% {
@@ -2665,10 +2665,6 @@ select {
 
 .decoration-primary-500 {
   text-decoration-color:rgba(var(--color-primary-500), 1)
-}
-
-.decoration-neutral {
-  text-decoration-color:rgba(var(--color-neutral), 1)
 }
 
 .opacity-0 {
@@ -4458,14 +4454,6 @@ pre {
   color:rgba(var(--color-primary-700), var(--tw-text-opacity))
 }
 
-.hover\:text-renoir-400:hover {
-  color:var(--color-renoir-400)
-}
-
-.hover\:text-brush-400:hover {
-  color:var(--color-brush-400)
-}
-
 .hover\:underline:hover {
   text-decoration-line:underline
 }
@@ -4478,20 +4466,12 @@ pre {
   text-decoration-color:rgba(var(--color-primary-400), 1)
 }
 
-.hover\:decoration-neutral:hover {
-  text-decoration-color:rgba(var(--color-neutral), 1)
+.hover\:decoration-secondary-400:hover {
+  text-decoration-color:rgba(var(--color-secondary-400), 1)
 }
 
-.hover\:decoration-renoir-400:hover {
-  text-decoration-color:var(--color-renoir-400)
-}
-
-.hover\:decoration-renoir-600:hover {
-  text-decoration-color:var(--color-renoir-600)
-}
-
-.hover\:decoration-brush-400:hover {
-  text-decoration-color:var(--color-brush-400)
+.hover\:decoration-primary-600:hover {
+  text-decoration-color:rgba(var(--color-primary-600), 1)
 }
 
 .hover\:decoration-2:hover {
