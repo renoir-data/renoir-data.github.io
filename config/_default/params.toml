@@ -15,12 +15,12 @@ enableCodeCopy = false
 # mainSections = ["section1", "section2"]
 # robots = ""
 
-logo = "logo-1024.png"
+logo = "logo.webp"
 
 disableImageOptimization = false
 disableTextInHeader = false
 
-defaultBackgroundImage = "img/bg-1.jpg" # used as default for background images 
+#defaultBackgroundImage = "img/bg-1.jpg" # used as default for background images 
 # defaultFeaturedImage = "img/bg-3.jpg" # used as default for featured images in all articles
 
 # highlightCurrentMenuArea = true
@@ -28,25 +28,25 @@ smartTOC = true
 smartTOCHideUnfocusedChildren = true
 
 [header]
-  layout = "fixed-gradient" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+  layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
 
 [footer]
   showMenu = true
   showCopyright = true
-  showThemeAttribution = true
-  showAppearanceSwitcher = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = false
   showScrollToTop = true
 
 [homepage]
-  layout = "background" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "img/bg-2-2k.jpg" # used in: hero, and card
+  layout = "custom" # valid options: page, profile, hero, card, background, custom
+  #homepageImage = "img/bg-2-2k.jpg" # used in: hero, and card
   showRecent = false
   showRecentItems = 5
   showMoreLink = true
   showMoreLinkDest = "/posts"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true # only used when layout equals background
+  #layoutBackgroundBlur = true # only used when layout equals background
 
 [article]
   showDate = false

@@ -1,7 +1,7 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Renoir"
+title = "DATABRUSH"
 
 [params]
   displayName = "EN"
@@ -14,7 +14,7 @@ title = "Renoir"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [author]
-  name = "Renoir"
+  name = "DataBrush"
   image = "logo-1024.png"
   headline = "REactive Network of Operators in Rust"
   bio = "Give value to your data with Renoir, the efficient platform that grows with your business, lowering operational and development costs."
