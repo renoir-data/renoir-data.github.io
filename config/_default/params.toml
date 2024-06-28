@@ -40,6 +40,7 @@ smartTOCHideUnfocusedChildren = true
 [homepage]
   layout = "custom" # valid options: page, profile, hero, card, background, custom
   #homepageImage = "img/bg-2-2k.jpg" # used in: hero, and card
+  whyImg1 = "image.webp"
   showRecent = false
   showRecentItems = 5
   showMoreLink = true

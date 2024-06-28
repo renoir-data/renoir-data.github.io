@@ -1,0 +1,33 @@
+<div class="relative pt-16 pb-32">
+    <div class="relative bg-white">
+        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div class="mx-auto max-w-xl p-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-10 lg:px-0 content-evenly">
+                <div class="max-w-full text-2xl font-bold gradient-logo-renoir prose dark:prose-invert text-black bg-primary-300">
+                    Why DataBrush? Let me introduce Renoir
+                </div>
+                <div class="py-8 prose dark:prose-invert text-black ">
+                    Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines
+                </div>
+                <a class="max-w-full prose dark:prose-invert text-xl font-bold hover:underline gradient-black-renoir dark:hover:text-primary-600 dark:decoration-primary-600" >
+                    Explore Renoir 
+                </a>
+            </div>
+            <div class="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:px-0 w-full">
+                <div class="lg:relative">
+                    {{ $homepageImage := "" }}
+                    {{ with .Site.Params.homepage.whyImg1 }}
+                        {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+                            {{ $homepageImage = resources.GetRemote . }}
+                        {{ else }}
+                            {{ $homepageImage = resources.Get . }}
+                        {{ end }}
+                    {{ end }}
+                    {{ if $homepageImage }}
+                    <img class="object-scale-down"
+                        src="{{ $homepageImage.RelPermalink }}">
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

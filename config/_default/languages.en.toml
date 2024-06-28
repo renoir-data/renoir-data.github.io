@@ -16,8 +16,8 @@ title = "DATABRUSH"
 [author]
   name = "DataBrush"
   image = "logo-1024.png"
-  headline = "REactive Network of Operators in Rust"
-  bio = "Give value to your data with Renoir, the efficient platform that grows with your business, lowering operational and development costs."
+  headline = "YOU NEED A BRUSH TO PAINT A DATA MASTERPIECE"
+  bio = "Createa a Fast, Easy, Flexible and Efficient Data Infrastructure that grows with your business"
   links = [
     # { email = "mailto:luca.demartini@polimi.it" },
 #     { link = "https://link-to-some-website.com/" },

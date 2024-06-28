@@ -1,8 +1,26 @@
-.gradient-text {
+.gradient-logo {
     background: linear-gradient(to right, 
                                 rgb(var(--color-neutral-100)),
                                 rgb(var(--color-secondary-600)));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.gradient-logo-renoir {
+    background: linear-gradient(to right, 
+                                rgb(var(--color-secondary-400)) 0%,
+                                rgb(var(--color-primary-600)) 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-black-renoir{
+    background: linear-gradient(to right, 
+    rgb(var(--color-black)) 0%,
+    rgb(var(--color-primary-600)) 80%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
 }

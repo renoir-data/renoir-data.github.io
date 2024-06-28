@@ -1,5 +1,6 @@
-<div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
-    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+<div class="w-full flex justify-center">
+<div style="padding-top:2px;padding-bottom:3px"
+    class="flex flex-1 items-center px-4 py-6 sm:px-6 space-x-3 max-w-7xl">
     {{ if .Site.Params.Logo }}
     {{ $logo := resources.Get .Site.Params.Logo }}
     {{ if $logo }}
@@ -14,11 +15,11 @@
     </div>
     {{ end }}
     {{- end }}
+
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
-
             {{ if not .Site.Params.disableTextInHeader | default true }}
-            <a href="{{ "" | relLangURL }}" class="text-base font-medium gradient-text">{{
+            <a href="{{ "" | relLangURL }}" class="text-base font-medium gradient-logo">{{
                 .Site.Title | markdownify
                 }}</a>
             {{ end }}
@@ -35,7 +36,7 @@
             {{ partial "translations.html" . }}
 
             {{ if .Site.Params.enableSearch | default false }}
-            <button id="search-button" aria-label="Search" class="text-base hover:text-brush-400"
+            <button id="search-button" aria-label="Search" class="text-base hover:text-secondary-400"
                 title="{{ i18n " search.open_button_title" }}">
                 {{ partial "icon.html" "search" }}
             </button>
@@ -142,6 +143,7 @@
             </div>
         </label>
     </div>
+</div>
 </div>
 
 {{ if .Site.Menus.subnavigation }}
