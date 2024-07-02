@@ -1,3 +1,44 @@
+.bg-white {
+    --tw-bg-opacity:1;
+    background-color:rgba(var(--color-white), var(--tw-bg-opacity))
+  }
+
+.bg-black {
+    --tw-bg-opacity:1;
+    background-color:rgba(var(--color-black), var(--tw-bg-opacity))
+  }
+  
+
+  .text-white {
+    --tw-text-opacity:1;
+    color:rgba(var(--color-white), var(--tw-text-opacity))
+  }
+
+  .text-black {
+    --tw-text-opacity:1;
+    color:rgba(var(--color-black), var(--tw-text-opacity))
+  }
+
+  .hover\:text-white:hover {
+    --tw-text-opacity:1;
+    color:rgba(var(--color-white), var(--tw-text-opacity))
+  }
+
+  .dark\:bg-black:is(.dark *) {
+    --tw-bg-opacity:1;
+    background-color:rgba(var(--color-black), var(--tw-bg-opacity))
+  }
+
+  .focus\:text-white:focus {
+    --tw-text-opacity:1;
+    color:rgba(var(--color-white), var(--tw-text-opacity))
+  }
+
+  .dark\:text-white:is(.dark *) {
+    --tw-text-opacity:1;
+    color:rgba(var(--color-white), var(--tw-text-opacity))
+  }
+
 .gradient-logo {
     background: linear-gradient(to right, 
                                 rgb(var(--color-neutral-100)),
