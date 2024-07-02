@@ -1,17 +1,71 @@
-<article class="max-w-full prose dark:prose-invert">
-    <div class="relative">
-        <div class="mx-auto max-w-7xl p-0 mt-10">
-            <div class="relative sm:overflow-hidden">
-                <div class="relative px-1 py-1 flex flex-col items-center text-center">
-                    <h1 class="mb-2 text-3xl font-extrabold text-neutral-800 dark:text-neutral-200 max-w-lg">
+<article class="max-w-fullprose dark:prose-invert">
+    <!-- LG SCREEN -->
+    <div class="relative mx-auto w-full h-svh max-h-[760px] overflow-hidden max-md:hidden ">
+        <div class="absolute inset-0">
+            {{ $homeImage := resources.Get .Site.Params.homepage.homepageImage_lg }}
+            <img class="m-0 object-cover w-full h-full" src="{{ $homeImage.RelPermalink }}" alt="background stroke">
+        </div>
+        <div class="relative h-full sm:overflow-hidden">
+            <div class="relative h-full px-1 py-1 flex flex-col items-center text-center justify-evenly">
+                <div class="absolute inset-0 bg-gradient-ellipse max-w-[800px]"></div>
+                    <h1 class="mb-2 text-7xl font-extrabold text-neutral-800 dark:text-neutral-200 max-w-[740px] z-10">
                         YOU NEED A <span class="gradient-logo-renoir">BRUSH</span> TO PAINT A DATA MASTERPIECE
                     </h1>
-                    <h2 class="mt-6 mb-0 text-lg text-neutral-800 dark:text-neutral-300 max-w-lg">
-                        Createa a <span class="gradient-logo-renoir">Fast</span>, <span class="gradient-logo-renoir">Easy</span>, <span class="gradient-logo-renoir">Flexible</span> and <span class="gradient-logo-renoir">Efficient</span> Data Infrastructure that grows with your business
+                <div class="w-screen relative flex flex-col items-center text-center py-4">
+                    <div class="absolute inset-0 bg-gradient-subslogan max-w-[780px]"></div>
+                    <h2 class="text-4xl text-neutral-800 dark:text-neutral-300 max-w-[730px] z-10">
+                        Create a <span class="gradient-logo-renoir">Fast</span>, <span class="gradient-logo-renoir">Easy</span>, <span class="gradient-logo-renoir">Flexible</span> and <span class="gradient-logo-renoir">Efficient</span> Data Infrastructure that grows with you
                     </h2>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- MD SCREEN -->
+
+    <div class="relative mx-auto w-full h-svh max-h-[760px] overflow-hidden md:hidden max-sm:hidden">
+        <div class="absolute inset-0">
+            {{ $homeImage := resources.Get .Site.Params.homepage.homepageImage_md }}
+            <img class="m-0 object-cover w-full h-full" src="{{ $homeImage.RelPermalink }}" alt="background stroke">
+        </div>
+        <div class="relative h-full sm:overflow-hidden">
+            <div class="relative h-full px-1 py-1 flex flex-col items-center text-center justify-evenly">
+                <div class="absolute inset-0 bg-gradient-ellipse max-w-[800px]"></div>
+                    <h1 class="mb-2 text-7xl font-extrabold text-neutral-800 dark:text-neutral-200 max-w-[740px] z-10">
+                        YOU NEED A <span class="gradient-logo-renoir">BRUSH</span> TO PAINT A DATA MASTERPIECE
+                    </h1>
+                <div class="w-screen relative flex flex-col items-center text-center py-4">
+                    <div class="absolute inset-0 bg-gradient-subslogan max-w-[780px]"></div>
+                    <h2 class="text-4xl text-neutral-800 dark:text-neutral-300 max-w-[730px] z-10">
+                        Create a <span class="gradient-logo-renoir">Fast</span>, <span class="gradient-logo-renoir">Easy</span>, <span class="gradient-logo-renoir">Flexible</span> and <span class="gradient-logo-renoir">Efficient</span> Data Infrastructure that grows with you
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SM SCREEN -->
+
+    <div class="relative mx-auto w-full h-svh max-h-[600px] overflow-hidden sm:hidden">
+        <div class="absolute inset-0">
+            {{ $homeImage := resources.Get .Site.Params.homepage.homepageImage_sm }}
+            <img class="m-0 object-cover w-full h-full" src="{{ $homeImage.RelPermalink }}" alt="background stroke">
+        </div>
+        <div class="relative h-full sm:overflow-hidden">
+            <div class="relative h-full px-1 py-1 flex flex-col items-center text-center justify-evenly">
+                <div class="absolute inset-0 bg-gradient-ellipse max-w-[800px]"></div>
+                    <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-neutral-200 max-w-[350px] z-10">
+                        YOU NEED A <span class="gradient-logo-renoir">BRUSH</span> TO PAINT A DATA MASTERPIECE
+                    </h1>
+                <div class="w-screen relative flex flex-col items-center text-center py-4">
+                    <div class="absolute inset-0 bg-gradient-subslogan max-w-[780px]"></div>
+                    <h2 class="text-xl text-neutral-800 dark:text-neutral-300 max-w-[400px] z-10">
+                        Create a <span class="gradient-logo-renoir">Fast</span>, <span class="gradient-logo-renoir">Easy</span>, <span class="gradient-logo-renoir">Flexible</span> and <span class="gradient-logo-renoir">Efficient</span> Data Infrastructure that grows with you
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
     {{ partial "components/card.html" . }}
 </article>

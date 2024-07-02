@@ -6,7 +6,7 @@
             {{ partial "icon.html" .Pre }}
         </div>
         {{ end }}
-        <p class="text-bg font-bg" title="{{ .Title }}">
+        <p class="text-lg font-bold" title="{{ .Title }}">
             {{ .Name | markdownify | emojify }}
         </p>
     </a>

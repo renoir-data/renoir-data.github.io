@@ -6,7 +6,7 @@
     </span>
     {{ end }}
     <a {{ if .URL }} href="{{ .URL }}" {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
-      target="_blank" {{ end }} {{ end }} class="text-base font-medium hover:decoration-primary-600 underline bg-gradient-to-r from-neutral-100 from-10% via-primary-300 to-70% to-primary-600 inline-block text-transparent bg-clip-text" title="{{ .Title }}">
+      target="_blank" {{ end }} {{ end }} class="text-xl font-medium hover:decoration-primary-600 underline bg-gradient-to-r from-neutral-100 from-10% via-primary-300 to-70% to-primary-600 inline-block text-transparent bg-clip-text" title="{{ .Title }}">
         {{ .Name | markdownify }}
     </a>
     <span>
@@ -24,7 +24,7 @@
             {{ partial "icon.html" .Pre }}
           </span>
           {{ end }}
-          <p class="text-sm font-sm text-red-500" title="{{ .Title }}">
+          <p class="text-md font-sm text-red-500" title="{{ .Title }}">
             {{ .Name | markdownify }}
           </p>
         </a>

@@ -9,7 +9,7 @@
             <span class="sr-only">{{ .Site.Title | markdownify }}</span>
 
             <img src="{{ $logo.RelPermalink }}" width="{{ div $logo.Width 2 }}" height="{{ div $logo.Height 2 }}"
-                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="{{ .Site.Title }}" />
+                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="{{ .Site.Title }} Logo" />
 
         </a>
     </div>
@@ -19,7 +19,7 @@
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
             {{ if not .Site.Params.disableTextInHeader | default true }}
-            <a href="{{ "" | relLangURL }}" class="text-base font-medium gradient-logo">{{
+            <a href="{{ "" | relLangURL }}" class="text-xl font-medium gradient-logo">{{
                 .Site.Title | markdownify
                 }}</a>
             {{ end }}
