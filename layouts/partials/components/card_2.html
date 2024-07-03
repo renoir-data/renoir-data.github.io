@@ -1,6 +1,6 @@
-<div class="relative py-4 bg-white">
+<div class="relative py-4 bg-black">
     <!-- <div class="absolute inset-0 z-0 max-lg:hidden ">
-        {{ $cardImage := resources.Get .Site.Params.homepage.whyStroke1_lg }}
+        {{ $cardImage := resources.Get .Site.Params.homepage.whyStroke2_lg }}
         <img class="m-0 object-cover w-full h-full nozoom" src="{{ $cardImage.RelPermalink }}" alt="background stroke">
     </div>
     <div class="absolute inset-0 z-0 lg:hidden max-sm:hidden">
@@ -13,27 +13,6 @@
     </div> -->
     <div class="relative justify-center flex z-10">
         <div class="md:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-24">
-            <div class="max-w-2xl items-center content-center">
-                <div class="p-3 items-center justify-center flex relative">
-                    <div class="bg-gradient-why max-w-[600px] "></div>
-                    <div class="max-w-md text-4xl font-bold gradient-logo-renoir text-center">
-                        Why DataBrush? <br> Let me introduce Renoir
-                    </div>
-                </div>
-                <div class="p-3 lg:my-20 my-12 w-full items-center justify-center flex relative">
-                    <div class="bg-gradient-why-2"></div>
-                    <div class="text-black max-w-lg text-center  font-bold">
-                        Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines
-                    </div>
-                </div>
-                <div class="w-full text-center flex justify-center">
-                    <a class="w-fit glass p-4 rounded-3xl dark:decoration-primary-600 text-xl font-bold hover:underline">
-                        <span class="gradient-black-renoir">
-                        Explore Renoir
-                        </span>
-                </a>
-                </div>
-            </div>
             <div class="mx-auto max-w-xl py-12 px-12 ">
                 <div class="relative">
                     {{ $homepageImage := "" }}
@@ -49,6 +28,21 @@
                         src="{{ $homepageImage.RelPermalink }}"
                         alt="test img">
                     {{ end }}
+                </div>
+            </div>
+            <div class="max-w-2xl items-center content-center">
+                <div class="p-3 lg:my-24 my-12 w-full items-center justify-center flex relative">
+                    <div class="bg-gradient-why-2-black"></div>
+                    <div class="text-white max-w-lg text-center  font-bold">
+                        Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines
+                    </div>
+                </div>
+                <div class="w-full text-center flex justify-center">
+                    <a class="w-fit glass-black p-4 rounded-3xl dark:decoration-primary-600 text-xl font-bold hover:underline">
+                        <span class="gradient-white-renoir">
+                        Explore Renoir
+                        </span>
+                </a>
                 </div>
             </div>
         </div>
