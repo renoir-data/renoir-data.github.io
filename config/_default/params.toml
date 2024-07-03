@@ -40,8 +40,9 @@ smartTOCHideUnfocusedChildren = true
 [homepage]
   layout = "custom" # valid options: page, profile, hero, card, background, custom
   homepageImage_lg = "img/bg_strokes/MainStroke_lg.svg" # used in: hero, and card
-  homepageImage_md = "img/bg_strokes/MainStroke_md.svg" # used in: hero, and card
-  homepageImage_sm = "img/bg_strokes/MainStroke_sm.svg" # used in: hero, and card
+  homepageImage_md = "img/bg_strokes/MainStroke_md.svg" 
+  homepageImage_sm = "img/bg_strokes/MainStroke_sm.svg" 
+  whyStroke1_lg = "img/bg_strokes/WhyStroke1_lg.svg" 
   whyImg1 = "image.webp"
   showRecent = false
   showRecentItems = 5

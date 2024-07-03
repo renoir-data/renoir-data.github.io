@@ -1,19 +1,33 @@
-<div class="relative pb-32">
-    <div class="relative bg-white">
-        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-            <div class="mx-auto max-w-xl p-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-10 lg:px-0 content-evenly">
-                <div class="max-w-full text-2xl font-bold gradient-logo-renoir prose dark:prose-invert text-black bg-primary-300">
-                    Why DataBrush? Let me introduce Renoir
+<div class="relative py-4 bg-white">
+    <div class="absolute inset-0 z-0">
+        {{ $cardImage := resources.Get .Site.Params.homepage.whyStroke1_lg }}
+        <img class="m-0 object-cover w-full h-full nozoom" src="{{ $cardImage.RelPermalink }}" alt="background stroke">
+    </div>
+    <div class="relative justify-center flex z-10">
+        <div class="grid max-w-7xl grid-cols-2 gap-24">
+            <div class="max-w-2xl items-center content-center">
+                <div class="ms-8 p-3">
+                    <div class="max-w-md text-4xl font-bold gradient-logo-renoir text-center">
+                        <div class="bg-gradient-why max-w-[800px]"></div>
+                        Why DataBrush? <br> Let me introduce Renoir
+                    </div>
                 </div>
-                <div class="py-8 prose dark:prose-invert text-black ">
-                    Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines
+                <div class="ms-8 p-3 my-24 w-full">
+                    <div class="text-black max-w-lg text-center font-bold">
+                        <div class="bg-gradient-why-2 max-w-[800px]"></div>
+                        Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines
+                    </div>
                 </div>
-                <a class="max-w-full prose dark:prose-invert text-xl font-bold hover:underline gradient-black-renoir dark:hover:text-primary-600 dark:decoration-primary-600" >
-                    Explore Renoir 
+                <div class="w-full text-center flex justify-center">
+                    <a class="w-fit glass p-4 rounded-3xl dark:decoration-primary-600 text-xl font-bold hover:underline">
+                        <span class="gradient-black-renoir">
+                        Explore Renoir
+                        </span>
                 </a>
+                </div>
             </div>
-            <div class="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:px-0 w-full">
-                <div class="lg:relative">
+            <div class="mx-auto max-w-xl py-12 px-12 ">
+                <div class="relative">
                     {{ $homepageImage := "" }}
                     {{ with .Site.Params.homepage.whyImg1 }}
                         {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
