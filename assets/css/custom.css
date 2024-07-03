@@ -67,9 +67,9 @@ color: transparent;
 }
 
 .glass{
-background: rgba(255, 255, 255, 0.30);
+background: rgba(255, 255, 255, 0.50);
 backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(40px);
 border: 2px solid rgba(255, 255, 255, 0.50);
 transition: box-shadow 0.2s ease;
 }
@@ -108,23 +108,23 @@ transition: box-shadow 0.2s ease;
 
 .bg-gradient-why{
     position: absolute;
-    top: 20%;
-    left: 22%;
-    width: 45%;
-    height: 20%;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 90%;
     transform: translate(-50%, -50%);
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 90%);
-    filter: blur(30px);
+    filter: blur(35px);
     z-index: -10;
     pointer-events: none;
 }
 
 .bg-gradient-why-2{
   position: absolute;
-  top: 55%;
-  left: 24%;
-  width: 50%;
-  height: 26%;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 90%;
   transform: translate(-50%, -50%);
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 100%);
   filter: blur(30px);
