@@ -1,10 +1,21 @@
-# The Renoir Book
+---
+title: 'The Renoir Book'
+date: 2024-06-15
+draft: false
+description: "Renoir project documentation"
+slug: "book"
+toc: true
+tags: ["docs", "book"]
+weight: 100
+showAuthor: false
+---
 
-This book serves as a quick start guide for installing and writing Renoir programs.
+This book serves as a quick start guide and documentation for installing and writing Renoir programs.
 
-The book is divided in the following sections:
+{{< content-list >}}
 
-- [Installing and creating a Renoir project](0-install/install)
+<!-- 
+- Installing and creating a Renoir project]
 - Quick start
     - From Iterators to Streams
     - Going parallel
@@ -34,4 +45,4 @@ The book is divided in the following sections:
     - Safe shared state
     - Request-Response
     - Multi-Pass logic
-- Future and feedback
+- Future and feedback -->

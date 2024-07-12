@@ -1,11 +1,10 @@
 ---
-title: "0.1 Installing and creating a Renoir project"
+title: "Installing and creating a Renoir project"
 date: 2024-06-15
 draft: true
 description: "Installing and creating a Renoir project"
-slug: "install"
 tags: ["docs", "book"]
-weight: 00
+weight: 100
 showAuthor: false
 ---
 

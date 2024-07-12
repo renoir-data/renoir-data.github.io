@@ -1,12 +1,13 @@
 ---
-title: '1.1 Quickstart'
+title: 'Quickstart'
 date: 2024-06-15
 draft: true
 description: "Installing and creating a Renoir project"
-slug: "install"
+slug: "quickstart"
+toc: true
 tags: ["docs", "book"]
-weight: 10
+weight: 100
 showAuthor: false
 ---
 
-Creating 
+Creating asjdbajkbfadfkjadf
