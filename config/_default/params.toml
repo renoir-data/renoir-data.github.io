@@ -45,12 +45,6 @@ smartTOCHideUnfocusedChildren = true
   whyStroke_lg  = "img/bg_strokes/WhyStroke_1-2_lg.svg"
   whyStroke_md  = "img/bg_strokes/WhyStroke_1-2_md.svg"
   whyStroke_sm  = "img/bg_strokes/WhyStroke_1-2_sm.svg"
-  whyStroke1_lg = "img/bg_strokes/WhyStroke1_lg.svg" 
-  whyStroke1_md = "img/bg_strokes/WhyStroke1_md.svg" 
-  whyStroke1_sm = "img/bg_strokes/WhyStroke1_sm.svg" 
-  whyStroke2_lg = "img/bg_strokes/WhyStroke2_lg.svg" 
-  whyStroke2_md = "img/bg_strokes/WhyStroke2_md.svg" 
-  whyStroke2_sm = "img/bg_strokes/WhyStroke2_sm.svg" 
   whyImg1 = "image.webp"
   showRecent = false
   showRecentItems = 5
@@ -59,6 +53,10 @@ smartTOCHideUnfocusedChildren = true
   cardView = true
   cardViewScreenWidth = false
   #layoutBackgroundBlur = true # only used when layout equals background
+  phrases = [
+    "YOU NEED A <custom>BRUSH</custom> TO PAINT A DATA MASTERPIECE",
+    "Create a <custom>Fast</custom>, <custom>Easy</custom>, <custom>Flexible</custom> and <custom>Efficient</custom> Data Infrastructure that grows with you"
+  ]
 
 [article]
   showDate = false

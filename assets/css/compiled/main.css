@@ -1443,10 +1443,6 @@ select {
   top:calc(100vh - 5.5rem)
 }
 
-.z-0 {
-  z-index:0
-}
-
 .z-10 {
   z-index:10
 }
@@ -1461,10 +1457,6 @@ select {
 
 .z-\[2\] {
   z-index:2
-}
-
-.z-20 {
-  z-index:20
 }
 
 .order-first {
@@ -5126,16 +5118,6 @@ pre {
   .lg\:my-24 {
     margin-top:6rem;
     margin-bottom:6rem
-  }
-
-  .lg\:my-2 {
-    margin-top:0.5rem;
-    margin-bottom:0.5rem
-  }
-
-  .lg\:my-20 {
-    margin-top:5rem;
-    margin-bottom:5rem
   }
 
   .lg\:ml-auto {

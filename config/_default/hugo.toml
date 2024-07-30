@@ -15,6 +15,9 @@ summaryLength = 0
 buildDrafts = true
 buildFuture = false
 
+[security]
+  enableInlineShortcodes = true
+
 # googleAnalytics = "G-XXXXXXXXX"
 
 [imaging]
