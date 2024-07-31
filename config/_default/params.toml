@@ -57,6 +57,21 @@ smartTOCHideUnfocusedChildren = true
     "YOU NEED A <custom>BRUSH</custom> TO PAINT A DATA MASTERPIECE",
     "Create a <custom>Fast</custom>, <custom>Easy</custom>, <custom>Flexible</custom> and <custom>Efficient</custom> Data Infrastructure that grows with you"
   ]
+  cards = [
+    { title = "Why DataBrush? <br> Let me introduce Renoir", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "white", left = true, img = "image.webp" },
+    { title = "", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "black", left = false, img = "image.webp" },
+    { title = "", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "white", left = true, img = "image.webp" }
+  ]
+  blog = { title = "Not convinced yet? Read our Blog", folder = "publications" }
+  aboutUs = [
+    {title="How rude of us not to introduce ourselves"},
+    {name="Davide Canali", role="CEO", img="image.webp"},
+    {name="Luca De Martini", role="CTO", img="image.webp"},
+    {name="Alessandro Margara", role="Advisor", img="image.webp"},
+    {name="Gianpaolo Cugola", role="Advisor", img="image.webp"},
+    {name="Fabio Chini", role="Advisor", img="image.webp"},
+  ]
+
 
 [article]
   showDate = false

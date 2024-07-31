@@ -1,42 +1,62 @@
 <article class="max-w-fullprose dark:prose-invert">
-    {{ $phrases := .Site.Params.homepage.phrases }}
-  
-    {{ $images := dict "lg" .Site.Params.homepage.homepageImage_lg "md" .Site.Params.homepage.homepageImage_md "sm" .Site.Params.homepage.homepageImage_sm }}
-    {{ $cardImages := dict "lg" .Site.Params.homepage.whyStroke_lg "md" .Site.Params.homepage.whyStroke_md "sm" .Site.Params.homepage.whyStroke_sm }}
-  
-    {{ range $size, $homeImage := $images }}
-      <div class="relative mx-auto w-full h-svh max-h-[{{ if eq $size "lg" }}760px{{ else if eq $size "md" }}760px{{ else }}600px{{ end }}] overflow-hidden {{ if eq $size "lg" }}max-md:hidden {{else if eq $size "md" }}md:hidden max-sm:hidden{{ else if eq $size "sm" }}sm:hidden{{ end }}">
-        <div class="absolute inset-0">
-          {{ $homeImage := resources.Get $homeImage }}
-          <img class="m-0 object-cover w-full h-full" src="{{ $homeImage.RelPermalink }}" alt="background stroke">
-        </div>
-        <div class="relative h-full sm:overflow-hidden">
-          <div class="relative h-full px-1 py-1 flex flex-col items-center text-center justify-evenly">
-            <div class="absolute inset-0 bg-gradient-ellipse max-w-[800px]"></div>
-            <h1 class="mb-2 text-{{ if eq $size "sm" }}4xl{{ else }}7xl{{ end }} font-extrabold text-neutral-800 dark:text-neutral-200 max-w-[{{ if eq $size "sm" }}350px{{ else }}740px{{ end }}] z-10">
-                {{ (index $phrases 0) | safeHTML | replaceRE "<custom>([\\s\\S]+?)</custom>" "{{< custom >}}$1{{< /custom >}}"| markdownify | safeHTML }}
-            </h1>
-            <div class="w-screen relative flex flex-col items-center text-center py-4">
-              <div class="absolute inset-0 bg-gradient-subslogan max-w-[780px]"></div>
-              <h2 class="text-{{ if eq $size "sm" }}xl{{ else }}4xl{{ end }} text-neutral-800 dark:text-neutral-300 max-w-[{{ if eq $size "sm" }}400px{{ else }}730px{{ end }}] z-10">
-                {{ (index $phrases 1) | safeHTML | replaceRE "<custom>([\\s\\S]+?)</custom>" "{{< custom >}}$1{{< /custom >}}"| markdownify | safeHTML }}
-              </h2>
-            </div>
-          </div>
+  {{ $phrases := .Site.Params.homepage.phrases }}
+
+  {{ $images := dict "lg" .Site.Params.homepage.homepageImage_lg "md" .Site.Params.homepage.homepageImage_md "sm"
+  .Site.Params.homepage.homepageImage_sm }}
+  {{ $cardImages := dict "lg" .Site.Params.homepage.whyStroke_lg "md" .Site.Params.homepage.whyStroke_md "sm"
+  .Site.Params.homepage.whyStroke_sm }}
+
+  {{ range $size, $homeImage := $images }}
+  <div class="relative mx-auto w-full h-svh max-h-[{{ if eq $size " lg" }}760px{{ else if eq $size "md" }}760px{{ else
+    }}600px{{ end }}] overflow-hidden {{ if eq $size "lg" }}max-md:hidden {{else if eq $size "md" }}md:hidden
+    max-sm:hidden{{ else if eq $size "sm" }}sm:hidden{{ end }}">
+    <div class="absolute inset-0">
+      {{ $homeImage := resources.Get $homeImage }}
+      <img class="m-0 object-cover w-full h-full" src="{{ $homeImage.RelPermalink }}" alt="background stroke">
+    </div>
+    <div class="relative h-full sm:overflow-hidden">
+      <div class="relative h-full px-1 py-1 flex flex-col items-center text-center justify-evenly">
+        <div class="absolute inset-0 bg-gradient-ellipse max-w-[800px]"></div>
+        <h1 class="mb-2 text-{{ if eq $size " sm" }}4xl{{ else }}7xl{{ end }} font-extrabold text-neutral-800
+          dark:text-neutral-200 max-w-[{{ if eq $size "sm" }}350px{{ else }}740px{{ end }}] z-10">
+          {{ (index $phrases 0) | safeHTML | replaceRE "<custom>([\\s\\S]+?)</custom>" "{{< custom>}}$1{{< /custom>}}"|
+              markdownify | safeHTML }}
+        </h1>
+        <div class="w-screen relative flex flex-col items-center text-center py-4">
+          <div class="absolute inset-0 bg-gradient-subslogan max-w-[780px]"></div>
+          <h2 class="text-{{ if eq $size " sm" }}xl{{ else }}4xl{{ end }} text-neutral-800 dark:text-neutral-300
+            max-w-[{{ if eq $size "sm" }}400px{{ else }}730px{{ end }}] z-10">
+            {{ (index $phrases 1) | safeHTML | replaceRE "<custom>([\\s\\S]+?)</custom>" "{{< custom>}}$1{{< /custom>
+                }}"| markdownify | safeHTML }}
+          </h2>
         </div>
       </div>
-    {{ end }}
-  
-    <div class="relative">
-      {{ range $size, $cardImage := $cardImages }}
-        <div class="absolute inset-0 z-10 {{ if eq $size "lg" }}max-lg:hidden{{ else if eq $size "md" }}lg:hidden max-sm:hidden{{ else }}sm:hidden{{ end }}">
-          {{ $cardImage := resources.Get $cardImage }}
-          <img class="m-0 object-cover w-full h-full nozoom" src="{{ $cardImage.RelPermalink }}" alt="background stroke">
-        </div>
-      {{ end }}
-  
-      {{ partial "components/card.html" (dict "context" . "left" "true"  "bg" "white" "title" "true"  "paragraph" "1") }}
-      {{ partial "components/card.html" (dict "context" . "left" "false" "bg" "black" "title" "false" "paragraph" "2") }}
-      {{ partial "components/card.html" (dict "context" . "left" "true"  "bg" "white" "title" "false" "paragraph" "3") }}
     </div>
-  </article>
+  </div>
+  {{ end }}
+
+  <div class="relative">
+    {{ range $size, $cardImage := $cardImages }}
+    <div class="absolute inset-0 z-10 {{ if eq $size " lg" }}max-lg:hidden{{ else if eq $size "md" }}lg:hidden
+      max-sm:hidden{{ else }}sm:hidden{{ end }}">
+      {{ $cardImage := resources.Get $cardImage }}
+      <img class="m-0 object-cover w-full h-full nozoom" src="{{ $cardImage.RelPermalink }}" alt="background stroke">
+    </div>
+    {{ end }}
+    {{ $global := . }}
+    {{ range .Site.Params.homepage.cards }}
+    {{ partial "components/card.html" (dict "left" .left "bg" .bg "title" .title "paragraph" .paragraph "img" .img
+    "context" $global ) }}
+    {{ end }}
+  </div>
+
+  {{ $global := . }}
+  {{ with .Site.Params.homepage.blog}}
+  {{ partial "components/recent-articles.html" (dict "context" $global "title" .title "folder" .folder) }}
+  {{ end }}
+
+  {{ $global := . }}
+  {{ with .Site.Params.homepage.aboutUs}}
+  {{ partial "components/about-us.html" (dict "context" $global "data" . ) }}
+  {{ end }}
+</article>

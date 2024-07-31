@@ -1,6 +1,6 @@
 <li class="mt-1">
-    <a href="{{ .URL }}" {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:"
-        ) }} target="_blank" {{ end }} class="flex items-center hover:decoration-brush-400 dark:hover:underline">
+    <a href="{{ .URL }}" {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
+        target="_blank" {{ end }} class="flex items-center hover:decoration-brush-400 dark:hover:underline">
         {{ if .Pre }}
         <div {{ if and .Pre .Name}} class="mr-2" {{ end }}>
             {{ partial "icon.html" .Pre }}

@@ -48,6 +48,15 @@
     color: transparent;
 }
 
+.gradient-black-logo {
+  background: linear-gradient(to right, 
+                              rgb(var(--color-black)),
+                              rgb(var(--color-secondary-600)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .gradient-logo-renoir {
     background: linear-gradient(to right, 
                                 rgb(var(--color-secondary-400)) 0%,
