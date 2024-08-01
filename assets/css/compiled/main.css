@@ -2839,6 +2839,11 @@ select {
   color:transparent
 }
 
+.text-secondary-400 {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-secondary-400), var(--tw-text-opacity))
+}
+
 .underline {
   text-decoration-line:underline
 }

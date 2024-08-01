@@ -25,8 +25,8 @@
                 {{ if ne $title "" }}
                 <div class="p-3 items-center justify-center flex relative">
                     <div class="bg-gradient-why max-w-[600px]"></div>
-                    <div class="max-w-md text-4xl font-bold gradient-logo-renoir text-center">
-                        {{ $title | markdownify | safeHTML }}
+                    <div class="max-w-md text-4xl font-bold text-black text-center">
+                        {{ $title | markdownify | safeHTML | replaceRE "<Logo>([\\s\\S]+?)</Logo>" "{{< logo >}}$1{{< /logo >}}"| markdownify | safeHTML | replaceRE "<Renoir>([\\s\\S]+?)</Renoir>" "{{< renoir >}}$1{{< /renoir >}}"| markdownify | safeHTML }}
                     </div>
                 </div>
                 {{ end }}
@@ -47,7 +47,7 @@
                         <a class=" transition-transform transform hover:scale-105  w-fit {{ if eq $bg "black"
                             }}glass-black{{ else if eq $bg "white" }}glass{{ end }} p-4 rounded-3xl
                             dark:decoration-primary-600 text-xl font-bold hover:underline">
-                            <span class="{{ if eq $bg " black" }}gradient-white-renoir{{ else if eq $bg "white"
+                            <span class="{{ if eq $bg "black" }}gradient-white-renoir{{ else if eq $bg "white"
                                 }}gradient-black-renoir{{ end }}">
                                 Explore Renoir
                             </span>
