@@ -18,7 +18,7 @@
     [[main]]
      name = "Overview"
      parent = "Renoir"
-     pageRef = "/renoir/overview"
+     pageRef = "/renoir"
      weight = 10
 
     [[main]]
