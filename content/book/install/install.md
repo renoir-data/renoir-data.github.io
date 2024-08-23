@@ -1,14 +1,12 @@
 ---
 title: "Installing and creating a Renoir project"
 date: 2024-06-15
-draft: true
+draft: false
 description: "Installing and creating a Renoir project"
 tags: ["docs", "book"]
 weight: 100
 showAuthor: false
 ---
-
-# Prerequisites
 
 The first requirement for building a Renoir project is the Rust toolchain.
 

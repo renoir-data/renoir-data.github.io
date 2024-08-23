@@ -1,7 +1,7 @@
 ---
 title: From Iterators to Streams
 date: 2024-06-15
-draft: true
+draft: false
 description: Moving from Iterators to parallel Streams
 slug: iterator-stream
 toc: true
