@@ -21,6 +21,19 @@ The first requirement for building a Renoir project is the Rust toolchain.
 
 ## Add rust toolchain to PATH
 
-+ **bash**: 
-+ **fish**:
-+ **zsh**:
++ **bash**: `echo 'export PATH=$PATH:~/.cargo/bin/' >> ~/.bashrc`
++ **fish**: `set -xU fish_user_paths $fish_user_paths ~/.cargo/bin/`
+
+## Create a new cargo project
+
+```sh
+cargo new --bin renoir-test
+cd renoir-test
+ # Add the renoir dependency to the `Cargo.toml`
+ # Currently we recommend using the GitHub repository directly
+cargo add renoir --git https://github.com/deib-polimi/renoir
+```
+
+You can now open the project in your editor of choice and start writing your application using Renoir!
+
+> Bonus Tip: [Development Environment](/book/appendix/editor)

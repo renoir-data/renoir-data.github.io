@@ -43,7 +43,7 @@
 [[main]]
  name = "Installation"
  parent = "Documentation"
- pageRef = "/book/0-install/install"
+ pageRef = "/book/install/install"
  weight = 1
 
 
