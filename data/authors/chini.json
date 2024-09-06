@@ -1,0 +1,9 @@
+{
+    "name": "Fabio Chini",
+    "image" : "img/chini.jpg",
+    "bio": "Advisor",
+    "social": [
+        { "email": "mailto:fabio.chini@polimi.it" },
+        { "github": "https://github.com/chinifabio" }
+    ]
+}

@@ -1,0 +1,58 @@
+{{- $posts := (where .context.Site.RegularPages "Section" .folder | first 3) -}}
+<div class="mb-6 flex justify-center">
+  <div class="max-w-7xl z-10">
+    <div class="flex justify-center">
+      <div class="relative">
+        <div class="bg-gradient-why-2-black"></div>
+        <h2 class="w-fit gradient-logo text-4xl font-bold text-left p-6">
+          {{ .title }}
+        </h2>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 justify-center">
+        {{- range $posts -}}
+        <li
+          class="card bg-white shadow-lg p-6 m-3 rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-green-100 max-w-md"
+        >
+          <a href="{{ .Permalink }}" class="block h-full">
+            <div class="h-full flex flex-col">
+              {{ $homepageImage := "" }} {{ with .Params.img}} {{ $homepageImage
+              = resources.Get . }} {{ end }}
+              <img
+                class="object-scale-down relative max-w-md"
+                src="{{ $homepageImage }}"
+                alt="test img"
+              />
+              <h3 class="text-lg font-semibold text-black">
+                {{ .Params.title }}
+              </h3>
+              <!-- <p class="text-black max-md:hidden">{{ .Params.summary }}</p> -->
+            </div>
+          </a>
+        </li>
+        {{- end -}}
+      </ul>
+    </div>
+    <div class="w-full text-center flex justify-center mt-5">
+      <a
+        class="transition-transform transform hover:scale-105 w-fit glass-logo p-4 rounded-3xl dark:decoration-secondary-400 text-xl font-bold hover:underline"
+      >
+        <span class="gradient-logo"> Read Our Blog </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: #38a169;
+    /* Tailwind's green-600 */
+    box-shadow: 0 0px 30px 0 rgba(38, 233, 175, 1);
+  }
+</style>

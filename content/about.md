@@ -11,6 +11,7 @@ authors:
   - "dema"
   - "margara"
   - "cugola"
+  - "chini"
 showAuthorsBadges : false
 ---
 

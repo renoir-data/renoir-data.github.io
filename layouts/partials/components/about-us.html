@@ -1,0 +1,78 @@
+<div class="flex bg-white justify-center">
+  <div class="max-w-7xl z-10">
+    <div class="flex justify-center">
+      <div class="relative">
+        <div class="bg-gradient-why-2"></div>
+        <h2
+          class="w-fit text-center gradient-black-logo text-4xl font-bold p-6"
+        >
+          {{ (index .data 0).title }}
+        </h2>
+      </div>
+    </div>
+    <!-- First Row -->
+    <div class="items-center">
+      <div
+        class="row flex flex-col sm:flex-row justify-center mb-5 items-center"
+      >
+        <div class="flex-1 max-w-xs p-1 m-4 text-center bg-neutral-50 rounded-md">
+          <img
+            src="{{ (index .data 1).img }}"
+            alt="{{ (index .data 1).name }}"
+            class="w-full h-auto rounded-3xl p-4"
+          />
+          <p class="text-xl text-black">{{ (index .data 1).name }}</p>
+          <p class="pb-2 text-base text-black">{{ (index .data 1).role }}</p>
+        </div>
+        <div class="flex-1 max-w-xs p-1 m-4 text-center bg-neutral-50 rounded-md">
+          <img
+            src="{{ (index .data 2).img }}"
+            alt="{{ (index .data 2).name }}"
+            class="w-full h-auto rounded-3xl p-4"
+          />
+          <p class="text-xl text-black">{{ (index .data 2).name }}</p>
+          <p class="pb-2 text-base text-black">{{ (index .data 2).role }}</p>
+        </div>
+      </div>
+      <!-- Second Row -->
+      <div
+        class="row flex flex-col sm:flex-row justify-center mb-5 items-center"
+      >
+        <div class="flex-1 max-w-xs p-1 m-4 text-center bg-neutral-50 rounded-md">
+          <img
+            src="{{ (index .data 3).img }}"
+            alt="{{ (index .data 3).name }}"
+            class="w-full h-auto rounded-3xl p-4"
+          />
+          <p class="text-xl text-black">{{ (index .data 3).name }}</p>
+          <p class="pb-2 text-base text-black">{{ (index .data 3).role }}</p>
+        </div>
+        <div class="flex-1 max-w-xs p-1 m-4 text-center bg-neutral-50 rounded-md">
+          <img
+            src="{{ (index .data 4).img }}"
+            alt="{{ (index .data 4).name }}"
+            class="w-full h-auto rounded-3xl p-4"
+          />
+          <p class="text-xl text-black">{{ (index .data 4).name }}</p>
+          <p class="pb-2 text-base text-black">{{ (index .data 4).role }}</p>
+        </div>
+        <div class="flex-1 max-w-xs p-1 m-4 text-center bg-neutral-50 rounded-md">
+          <img
+            src="{{ (index .data 5).img }}"
+            alt="{{ (index .data 5).name }}"
+            class="w-full h-auto rounded-3xl p-4"
+          />
+          <p class="text-xl text-black">{{ (index .data 5).name }}</p>
+          <p class="pb-2 text-base text-black">{{ (index .data 5).role }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full text-center flex justify-center mt-5 mb-5">
+      <a
+        class="transition-transform transform hover:scale-105 w-fit glass-white-logo p-4 rounded-3xl dark:decoration-secondary-400 text-xl font-bold hover:underline"
+      >
+        <span class="gradient-black-logo"> About Us </span>
+      </a>
+    </div>
+  </div>
+</div>

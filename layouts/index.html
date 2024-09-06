@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default " en") }} {{- . -}} {{ end }}" dir="{{ if .Site.Params.rtl | default false -}}
+    rtl
+  {{- else -}}
+    ltr
+  {{- end }}" class="scroll-smooth" data-default-appearance="{{ .Site.Params.defaultAppearance | default " light" }}"
+  data-auto-appearance="{{ .Site.Params.autoSwitchAppearance | default " true" }}">
+  {{- partial "head.html" . -}}
+<body class="flex flex-col h-screen text-lg leading-7 bg-black text-white dark:bg-black dark:text-white scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 m-auto"> 
+  {{ $header := print "partials/header/" .Site.Params.header.layout ".html" }}
+  {{ if templates.Exists $header }}
+  {{ partial $header . }}
+  {{ else }}
+  {{ partial "partials/header/basic.html" . }}
+  {{ end }}
+  <div class="relative flex flex-col grow">
+    {{ $phrases := .Site.Params.homepage.phrases }}
+    <div class="relative mx-auto w-full h-svh overflow-hidden">
+      <div class="absolute inset-0">
+        <!-- small -->
+        <svg class="home-image sm:hidden m-0 object-cover w-full h-full" width="393" height="512" viewBox="0 0 393 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-158 461.714H-51.6021C-15.7937 461.714 15.9125 438.579 26.8383 404.478V404.478C41.6678 358.194 93.1405 334.745 137.795 353.932L191.779 377.127C225.779 391.736 265.364 380.72 286.93 350.649V350.649C317.605 307.877 298.532 247.632 248.831 230.306L208.861 216.373C171.884 203.483 148.9 166.552 153.665 127.684V127.684C158.041 91.9903 184.853 63.1478 220.133 56.1824L239.417 52.3752C246.455 50.9856 253.613 50.2857 260.788 50.2857H279.674C324.877 50.2857 369.495 60.5006 410.195 80.167L535.5 140.714" stroke="url(#paint0_linear_131_362)" stroke-width="100" stroke-linecap="round"/>
+          <defs>
+          <linearGradient id="paint0_linear_131_362" x1="-2.5928" y1="73.9627" x2="408.467" y2="171.82" gradientUnits="userSpaceOnUse">
+          <stop offset="0.176846" stop-color="#26E9AF"/>
+          <stop offset="0.826846" stop-color="#AF4AD4"/>
+          </linearGradient>
+          </defs>
+        </svg>
+        <!-- medium -->
+        <svg class="home-image lg:hidden max-sm:hidden m-0 object-cover w-full h-full" width="834" height="530" viewBox="0 0 834 530" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-39.7126 457.875L-24.8617 460.344C7.25923 465.682 40.1545 457.438 65.9601 437.58V437.58C100.453 411.037 117.426 367.587 110.058 324.692L102.493 280.651C95.2995 238.773 109.209 196.041 139.676 166.423V166.423C196.86 110.831 290.262 119.925 335.692 185.472C373.369 239.831 417.044 302.695 453.132 354.221C492.06 409.803 567.285 417.22 617.32 371.381V371.381C655.064 336.803 666.491 281.976 645.705 235.198L638.8 219.661C613.686 163.145 641.347 97.1476 699.252 75.4273V75.4273C725.386 65.6244 754.309 66.3761 779.899 77.5233L880.928 121.533" stroke="url(#paint0_linear_131_327)" stroke-width="136" stroke-linecap="round"/>
+          <defs>
+          <linearGradient id="paint0_linear_131_327" x1="-5.50743" y1="98.7927" x2="752.095" y2="452.446" gradientUnits="userSpaceOnUse">
+          <stop offset="0.176846" stop-color="#26E9AF"/>
+          <stop offset="0.826846" stop-color="#AF4AD4"/>
+          </linearGradient>
+          </defs>
+        </svg>
+        <!-- large -->
+        <svg class="home-image max-lg:hidden m-0 object-cover w-full h-full" width="1512" height="656" viewBox="0 0 1512 656" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-71.9248 564.993L50.0947 585.304C85.2898 591.162 121.43 584.827 152.534 567.346V567.346C211.305 534.315 242.34 467.378 229.577 401.181L228.228 394.185C223.487 369.597 213.261 346.395 198.311 326.307L168.382 286.092C138.137 245.453 133.089 191.155 155.115 145.535V145.535C172.843 108.818 206.287 81.8994 245.981 72.5786L250.518 71.5132C292.064 61.7575 335.728 73.6093 366.64 103.032V103.032C385.317 120.809 398.114 143.869 403.318 169.123L417.914 239.948C425.195 275.281 438.614 309.128 459.073 338.841C465.991 348.887 473.66 359.762 481.589 370.544C512.914 413.137 561.321 436.796 613.338 446.265L632.21 449.701C706.088 463.149 782.323 448.403 845.857 408.374L862.739 397.738C883.175 384.863 905.347 374.975 928.581 368.375L945.345 363.614C986.062 352.048 1029.4 353.704 1069.11 368.342L1075.36 370.643C1089.18 375.739 1102.2 382.793 1114.02 391.591L1145.72 415.188C1183.33 443.185 1235.11 442.198 1271.63 412.788V412.788C1303.2 387.356 1316.88 345.746 1306.57 306.537L1298.48 275.783C1278.92 201.447 1317.97 124.216 1389.43 95.9068L1404.6 89.8989C1458.16 68.679 1518.83 75.9825 1565.82 109.31L1595.48 130.336" stroke="url(#paint0_linear_131_294)" stroke-width="136" stroke-linecap="round"/>
+          <defs>
+          <linearGradient id="paint0_linear_131_294" x1="-9.97479" y1="100.948" x2="1160.27" y2="866.542" gradientUnits="userSpaceOnUse">
+          <stop offset="0.176846" stop-color="#26E9AF"/>
+          <stop offset="0.826846" stop-color="#AF4AD4"/>
+          </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="relative h-full sm:overflow-hidden">
+        <div class="relative h-full px-1 py-1 flex flex-col items-center text-center justify-evenly">
+          <div class="relative">
+            <div class="inset-0 bg-gradient-ellipse"></div>
+            <div class="relative z-10 font-extrabold text-neutral-800 text-4xl max-w-[350px] md:text-7xl md:max-w-[740px] dark:text-neutral-200">
+                {{ (index $phrases 0) | safeHTML | replaceRE "<custom>([\\s\\S]+?)</custom>" "{{< custom >}}$1{{< /custom >}}"| markdownify | safeHTML }}
+            </div>
+          </div>
+          <div class="w-screen relative flex flex-col items-center text-center py-4">
+            <div class="relative">
+              <div class="inset-0 bg-gradient-subslogan "></div>
+              <div class="relative z-10 text-neutral-800 dark:text-neutral-300 text-xl max-w-[400px] md:text-4xl md:max-w-[730px]">
+                {{ (index $phrases 1) | safeHTML | replaceRE "<custom>([\\s\\S]+?)</custom>" "{{< custom >}}$1{{< /custom >}}"| markdownify | safeHTML }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative flex flex-col gap-40">
+      <div class="absolute inset-0 z-10">
+        <img class="m-0 object-cover w-full h-full nozoom block md:hidden" src="{{ (.Site.Params.homepage.whyStroke_sm | resources.Get).RelPermalink }}" alt="background stroke">
+        <img class="m-0 object-cover w-full h-full nozoom lg:hidden max-sm:hidden" src="{{ (.Site.Params.homepage.whyStroke_md | resources.Get).RelPermalink }}" alt="background stroke">
+        <img class="m-0 object-cover w-full h-full nozoom hidden lg:block" src="{{ (.Site.Params.homepage.whyStroke_lg | resources.Get).RelPermalink }}" alt="background stroke">  
+      </div>
+      {{ $global := . }}
+      {{ range .Site.Params.homepage.cards }}
+        {{ partial "components/card.html" (dict "left" .left "bg" .bg "title" .title "paragraph" .paragraph "img" .img "context" $global ) }}
+      {{ end }}
+      {{ $global := . }}
+      {{ with .Site.Params.homepage.blog}}
+        {{ partial "components/recent-articles.html" (dict "context" $global "title" .title "folder" .folder) }}
+      {{ end }}
+      {{ $global := . }}
+      {{ with .Site.Params.homepage.aboutUs}}
+        {{ partial "components/about-us.html" (dict "context" $global "data" . ) }}
+      {{ end }}
+    </div>
+  </div>
+  {{- partial "footer.html" . -}}
+  {{ if .Site.Params.enableSearch | default false }}
+  {{- partial "search.html" . -}}
+  {{ end }}
+</body>
+</html>
