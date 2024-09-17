@@ -4,7 +4,7 @@
     <div class="flex justify-center">
       <div class="relative">
         <div class="bg-gradient-why-2-black"></div>
-        <h2 class="w-fit gradient-logo text-4xl font-bold text-left p-6">
+        <h2 class="w-fit gradient-logo text-4xl md:text-6xl font-bold text-left p-6">
           {{ .title }}
         </h2>
       </div>
@@ -17,14 +17,14 @@
         >
           <a href="{{ .Permalink }}" class="block h-full">
             <div class="h-full flex flex-col">
-              {{ $homepageImage := "" }} {{ with .Params.img}} {{ $homepageImage
+              {{ $homepageImage := "" }} {{ with .Params.homepage.whyImg1}} {{ $homepageImage
               = resources.Get . }} {{ end }}
               <img
                 class="object-scale-down relative max-w-md"
-                src="{{ $homepageImage }}"
+                src="image.webp"
                 alt="test img"
               />
-              <h3 class="text-lg font-semibold text-black">
+              <h3 class="text-lg font-semibold text-black text-center pt-3">
                 {{ .Params.title }}
               </h3>
               <!-- <p class="text-black max-md:hidden">{{ .Params.summary }}</p> -->
@@ -36,9 +36,9 @@
     </div>
     <div class="w-full text-center flex justify-center mt-5">
       <a
-        class="transition-transform transform hover:scale-105 w-fit glass-logo p-4 rounded-3xl dark:decoration-secondary-400 text-xl font-bold hover:underline"
+        class="transition-transform transform hover:scale-105  w-fit glass-logo p-4 rounded-3xl text-xl font-bold"
       >
-        <span class="gradient-logo"> Read Our Blog </span>
+        <span class="text-black"> Read Our Blog </span>
       </a>
     </div>
   </div>

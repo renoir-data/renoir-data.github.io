@@ -67,12 +67,12 @@
         </div>
       </div>
     </div>
-    <div class="relative flex flex-col gap-40">
-      <div class="absolute inset-0 z-10">
+    <div class="relative flex flex-col gap-10">
+      <!-- <div class="absolute inset-0 z-10">
         <img class="m-0 object-cover w-full h-full nozoom block md:hidden" src="{{ (.Site.Params.homepage.whyStroke_sm | resources.Get).RelPermalink }}" alt="background stroke">
         <img class="m-0 object-cover w-full h-full nozoom lg:hidden max-sm:hidden" src="{{ (.Site.Params.homepage.whyStroke_md | resources.Get).RelPermalink }}" alt="background stroke">
         <img class="m-0 object-cover w-full h-full nozoom hidden lg:block" src="{{ (.Site.Params.homepage.whyStroke_lg | resources.Get).RelPermalink }}" alt="background stroke">  
-      </div>
+      </div> -->
       {{ $global := . }}
       {{ range .Site.Params.homepage.cards }}
         {{ partial "components/card.html" (dict "left" .left "bg" .bg "title" .title "paragraph" .paragraph "img" .img "context" $global ) }}

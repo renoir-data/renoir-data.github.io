@@ -58,9 +58,9 @@ smartTOCHideUnfocusedChildren = true
     "Create a <custom>Fast</custom>, <custom>Easy</custom>, <custom>Flexible</custom> and <custom>Efficient</custom> Data Infrastructure that grows with you"
   ]
   cards = [
-    { title = "Why <Logo>DataBrush?</Logo> <br> Let me introduce <Renoir>Renoir</Renoir>", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "white", left = true, img = "image.webp" },
+    { title = "Why <Logo>DataBrush</Logo>? <br> Let me introduce <Renoir>Renoir</Renoir>", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "black", left = true, img = "image.webp" },
     { title = "", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "black", left = false, img = "image.webp" },
-    { title = "", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "white", left = true, img = "image.webp" }
+    { title = "", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "black", left = true, img = "image.webp" }
   ]
   blog = { title = "Not convinced yet? Read our Blog", folder = "publications" }
   aboutUs = [

@@ -14,7 +14,7 @@ body.zen-mode-enable {
   }
 }
 
-/*! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -1460,6 +1460,34 @@ select {
   order:-9999
 }
 
+.order-1 {
+  order:1
+}
+
+.order-2 {
+  order:2
+}
+
+.order-4 {
+  order:4
+}
+
+.-order-1 {
+  order:-1
+}
+
+.order-3 {
+  order:3
+}
+
+.order-6 {
+  order:6
+}
+
+.order-8 {
+  order:8
+}
+
 .float-left {
   float:left
 }
@@ -2016,6 +2044,10 @@ select {
   grid-template-columns:repeat(1, minmax(0, 1fr))
 }
 
+.grid-cols-2 {
+  grid-template-columns:repeat(2, minmax(0, 1fr))
+}
+
 .flex-row {
   flex-direction:row
 }
@@ -2054,6 +2086,26 @@ select {
 
 .gap-4 {
   gap:1rem
+}
+
+.gap-40 {
+  gap:10rem
+}
+
+.gap-1 {
+  gap:0.25rem
+}
+
+.gap-10 {
+  gap:2.5rem
+}
+
+.gap-20 {
+  gap:5rem
+}
+
+.gap-5 {
+  gap:1.25rem
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2310,14 +2362,29 @@ select {
   --tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)
 }
 
+.from-neutral-100 {
+  --tw-gradient-from:rgba(var(--color-neutral-100), 1) var(--tw-gradient-from-position);
+  --tw-gradient-to:rgba(var(--color-neutral-100), 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
 .from-primary-500 {
   --tw-gradient-from:rgba(var(--color-primary-500), 1) var(--tw-gradient-from-position);
   --tw-gradient-to:rgba(var(--color-primary-500), 0) var(--tw-gradient-to-position);
   --tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)
 }
 
+.from-10\% {
+  --tw-gradient-from-position:10%
+}
+
 .from-60\% {
   --tw-gradient-from-position:60%
+}
+
+.via-primary-300 {
+  --tw-gradient-to:rgba(var(--color-primary-300), 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops:var(--tw-gradient-from), rgba(var(--color-primary-300), 1) var(--tw-gradient-via-position), var(--tw-gradient-to)
 }
 
 .to-neutral {
@@ -2328,6 +2395,10 @@ select {
   --tw-gradient-to:rgba(var(--color-neutral-100), 1) var(--tw-gradient-to-position)
 }
 
+.to-primary-600 {
+  --tw-gradient-to:rgba(var(--color-primary-600), 1) var(--tw-gradient-to-position)
+}
+
 .to-secondary-600 {
   --tw-gradient-to:rgba(var(--color-secondary-600), 1) var(--tw-gradient-to-position)
 }
@@ -2336,8 +2407,17 @@ select {
   --tw-gradient-to:transparent var(--tw-gradient-to-position)
 }
 
+.to-70\% {
+  --tw-gradient-to-position:70%
+}
+
 .bg-clip-padding {
   background-clip:padding-box
+}
+
+.bg-clip-text {
+  -webkit-background-clip:text;
+          background-clip:text
 }
 
 .object-cover {
@@ -2385,6 +2465,10 @@ select {
 
 .p-6 {
   padding:1.5rem
+}
+
+.p-12 {
+  padding:3rem
 }
 
 .px-0 {
@@ -2530,6 +2614,18 @@ select {
   padding-top:2rem
 }
 
+.pb-5 {
+  padding-bottom:1.25rem
+}
+
+.pb-12 {
+  padding-bottom:3rem
+}
+
+.pb-6 {
+  padding-bottom:1.5rem
+}
+
 .text-left {
   text-align:left
 }
@@ -2595,6 +2691,26 @@ select {
 .text-xs {
   font-size:0.75rem;
   line-height:1rem
+}
+
+.text-3xl {
+  font-size:1.875rem;
+  line-height:2.25rem
+}
+
+.text-9xl {
+  font-size:8rem;
+  line-height:1
+}
+
+.text-7xl {
+  font-size:4.5rem;
+  line-height:1
+}
+
+.text-5xl {
+  font-size:3rem;
+  line-height:1
 }
 
 .font-bold {
@@ -2723,6 +2839,10 @@ select {
 
 .text-transparent {
   color:transparent
+}
+
+.underline {
+  text-decoration-line:underline
 }
 
 .\!no-underline {
@@ -4542,6 +4662,11 @@ pre {
   color:rgba(var(--color-primary-700), var(--tw-text-opacity))
 }
 
+.hover\:text-secondary-400:hover {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-secondary-400), var(--tw-text-opacity))
+}
+
 .hover\:underline:hover {
   text-decoration-line:underline
 }
@@ -4552,6 +4677,14 @@ pre {
 
 .hover\:decoration-primary-400:hover {
   text-decoration-color:rgba(var(--color-primary-400), 1)
+}
+
+.hover\:decoration-primary-600:hover {
+  text-decoration-color:rgba(var(--color-primary-600), 1)
+}
+
+.hover\:decoration-secondary-400:hover {
+  text-decoration-color:rgba(var(--color-secondary-400), 1)
 }
 
 .hover\:decoration-2:hover {
@@ -4823,6 +4956,10 @@ pre {
   color:rgba(var(--color-primary-400), var(--tw-text-opacity))
 }
 
+.dark\:hover\:underline:hover:is(.dark *) {
+  text-decoration-line:underline
+}
+
 .dark\:focus\:bg-primary-900:focus:is(.dark *) {
   --tw-bg-opacity:1;
   background-color:rgba(var(--color-primary-900), var(--tw-bg-opacity))
@@ -4857,6 +4994,18 @@ pre {
 }
 
 @media (min-width: 640px) {
+  .sm\:order-3 {
+    order:3
+  }
+
+  .sm\:order-1 {
+    order:1
+  }
+
+  .sm\:order-4 {
+    order:4
+  }
+
   .sm\:mb-0 {
     margin-bottom:0px
   }
@@ -4911,6 +5060,18 @@ pre {
 }
 
 @media (min-width: 853px) {
+  .md\:order-6 {
+    order:6
+  }
+
+  .md\:order-1 {
+    order:1
+  }
+
+  .md\:order-3 {
+    order:3
+  }
+
   .md\:-mr-16 {
     margin-right:-4rem
   }
@@ -4989,6 +5150,11 @@ pre {
     font-size:4.5rem;
     line-height:1
   }
+
+  .md\:text-6xl {
+    font-size:3.75rem;
+    line-height:1
+  }
 }
 
 @media (min-width: 1024px) {
@@ -5020,6 +5186,10 @@ pre {
     order:9999
   }
 
+  .lg\:order-1 {
+    order:1
+  }
+
   .lg\:m-0 {
     margin:0px
   }
@@ -5037,6 +5207,11 @@ pre {
   .lg\:my-24 {
     margin-top:6rem;
     margin-bottom:6rem
+  }
+
+  .lg\:my-12 {
+    margin-top:3rem;
+    margin-bottom:3rem
   }
 
   .lg\:ml-auto {
@@ -5095,12 +5270,20 @@ pre {
     grid-template-columns:repeat(2, minmax(0, 1fr))
   }
 
+  .lg\:grid-rows-2 {
+    grid-template-rows:repeat(2, minmax(0, 1fr))
+  }
+
   .lg\:flex-row {
     flex-direction:row
   }
 
   .lg\:gap-24 {
     gap:6rem
+  }
+
+  .lg\:gap-10 {
+    gap:2.5rem
   }
 
   .lg\:p-\[12vh\] {
@@ -5141,11 +5324,19 @@ pre {
   .xl\:grid-cols-4 {
     grid-template-columns:repeat(4, minmax(0, 1fr))
   }
+
+  .xl\:gap-20 {
+    gap:5rem
+  }
 }
 
 @media (min-width: 1536px) {
   .\32xl\:grid-cols-5 {
     grid-template-columns:repeat(5, minmax(0, 1fr))
+  }
+
+  .\32xl\:gap-20 {
+    gap:5rem
   }
 }
 
