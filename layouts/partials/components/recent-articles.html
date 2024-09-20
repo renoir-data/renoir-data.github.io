@@ -1,4 +1,4 @@
-{{- $posts := (where .context.Site.RegularPages "Section" .folder | first 3) -}}
+{{- $posts := (where .context.Site.RegularPages "Section" "eq" "blog" | first 3) -}}
 <div class="mb-6 flex justify-center">
   <div class="max-w-7xl z-10">
     <div class="flex justify-center">
@@ -17,8 +17,6 @@
         >
           <a href="{{ .Permalink }}" class="block h-full">
             <div class="h-full flex flex-col">
-              {{ $homepageImage := "" }} {{ with .Params.homepage.whyImg1}} {{ $homepageImage
-              = resources.Get . }} {{ end }}
               <img
                 class="object-scale-down relative max-w-md"
                 src="image.webp"

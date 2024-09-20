@@ -223,3 +223,7 @@ transition: box-shadow 0.2s ease;
   stroke-dashoffset: 8000;
   animation: draw 3s ease-in-out forwards;
 }
+
+.shadow-hover-logo:hover {
+  box-shadow: 0px 0px 15px rgba(38, 233, 175, 1 );
+}

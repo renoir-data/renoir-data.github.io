@@ -17,33 +17,35 @@
 
 [[main]]
  name = "Blog"
- pageRef = "/posts"
+ pageRef = "/blog"
+ weight = 40
+
+[[main]]
+ name = "Renoir"
+ pageRef = "/renoir"
  weight = 10
+
+[[main]]
+ name = "About Us"
+ pageRef = "/about"
+ weight = 50
 
 [[main]]
  name = "Documentation"
+ parent = "Renoir"
  pageRef = "/book"
- weight = 20
-
-[[main]]
- name = "Publications"
- pageRef = "/publications"
- weight = 20
+ weight = 2
 
 [[main]]
  name = "Reference"
+ parent = "Renoir"
  url = "https://deib-polimi.github.io/renoir/renoir/"
- weight = 20
+ weight = 3
 
 [[main]]
- name = "About"
- pageRef = "/about"
- weight = 10
-
-[[main]]
- name = "Installation"
- parent = "Documentation"
- pageRef = "/book/install/install"
+ name = "Overview"
+ parent = "Renoir"
+ pageRef = "/renoir"
  weight = 1
 
 

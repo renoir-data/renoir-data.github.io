@@ -3,6 +3,7 @@
 {{ $title := .title }}
 {{ $paragraph := .paragraph }}
 {{ $img := .img }}
+{{ $button := .button }}
 
 <div class="relative py-4">
     {{ if ne $title "" }}
@@ -38,7 +39,7 @@
                             {{ $paragraph | markdownify | safeHTML }}
                     </div>
                 </div>
-
+                    {{ if eq $button "true" }}
                     <div class="w-full text-center flex justify-center pb-12">
                         <a class=" transition-transform transform hover:scale-105  w-fit glass-black p-4 rounded-3xl text-xl font-bold">
                             <span class="text-black">
@@ -46,6 +47,7 @@
                             </span>
                         </a>
                     </div>
+                    {{ end }}
             </div>
 
             {{ if eq $left true }}

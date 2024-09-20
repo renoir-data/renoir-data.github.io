@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="flex justify-center items-center">
+    <h1 class="text-5xl md:text-9xl font-bold my-5 text-center gradient-white-renoir">{{ .Title }}</h1>
+</div>
+<div class="justify-center flex items-center self-center mb-4">
+    <div class="min-w-0 min-h-0 max-w-prose text-xl md:text-2xl font-normal text-justify text-neutral-300">
+        {{ with .Site.Data.renoir.info.abstract }}
+        {{ . | markdownify | safeHTML }}
+        {{ end }}
+    </div>
+</div>
+
+<div class="flex mt-5 items-center justify-center">
+    <h1 class="text-4xl md:text-6xl font-bold my-5 text-center max-w-fit justify-center">Characteristics</h1>
+</div>
+
+{{ $global := . }}
+{{ range .Site.Data.renoir.info.cards }}
+{{ partial "components/card.html" (dict "left" .left "title" "" "paragraph" .paragraph "img" .img "button" "false"
+"context" $global ) }}
+{{ end }}
+
+<div class="flex mt-5">
+    <h1 class="text-5xl md:text-7xl font-bold my-5 text-left max-w-fit">Create your data masterpiece</h1>
+</div>
+
+<div class="justify-center items-center">
+    {{.Content}}
+</div>
+{{ end }}
