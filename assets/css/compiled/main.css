@@ -1478,10 +1478,6 @@ select {
   order:-9999
 }
 
-.col-auto {
-  grid-column:auto
-}
-
 .float-left {
   float:left
 }
@@ -1628,6 +1624,10 @@ select {
   margin-bottom:0.75rem
 }
 
+.mb-4 {
+  margin-bottom:1rem
+}
+
 .mb-5 {
   margin-bottom:1.25rem
 }
@@ -1728,10 +1728,6 @@ select {
   margin-top:0.1rem
 }
 
-.mb-4 {
-  margin-bottom:1rem
-}
-
 .box-content {
   box-sizing:content-box
 }
@@ -1758,6 +1754,31 @@ select {
 
 .hidden {
   display:none
+}
+
+.size-10 {
+  width:2.5rem;
+  height:2.5rem
+}
+
+.size-10\/12 {
+  width:83.333333%;
+  height:83.333333%
+}
+
+.size-full {
+  width:100%;
+  height:100%
+}
+
+.size-96 {
+  width:24rem;
+  height:24rem
+}
+
+.size-11\/12 {
+  width:91.666667%;
+  height:91.666667%
 }
 
 .\!h-px {
@@ -1978,6 +1999,10 @@ select {
   max-width:65ch
 }
 
+.max-w-screen-md {
+  max-width:853px
+}
+
 .max-w-xl {
   max-width:36rem
 }
@@ -2175,10 +2200,6 @@ select {
 
 .\!whitespace-nowrap {
   white-space:nowrap !important
-}
-
-.text-balance {
-  text-wrap:balance
 }
 
 .break-words {
@@ -2639,26 +2660,24 @@ select {
   vertical-align:text-bottom
 }
 
-.font-sans {
-  font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-}
-
-.font-serif {
-  font-family:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
-}
-
-.font-mono {
-  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
-}
-
 .text-2xl {
   font-size:1.5rem;
   line-height:2rem
 }
 
+.text-3xl {
+  font-size:1.875rem;
+  line-height:2.25rem
+}
+
 .text-4xl {
   font-size:2.25rem;
   line-height:2.5rem
+}
+
+.text-5xl {
+  font-size:3rem;
+  line-height:1
 }
 
 .text-\[0\.6rem\] {
@@ -2688,16 +2707,6 @@ select {
 .text-xs {
   font-size:0.75rem;
   line-height:1rem
-}
-
-.text-5xl {
-  font-size:3rem;
-  line-height:1
-}
-
-.text-3xl {
-  font-size:1.875rem;
-  line-height:2.25rem
 }
 
 .font-bold {
@@ -4677,6 +4686,16 @@ pre {
   transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
+.hover\:border-primary-500:hover {
+  --tw-border-opacity:1;
+  border-color:rgba(var(--color-primary-500), var(--tw-border-opacity))
+}
+
+.hover\:border-secondary-500:hover {
+  --tw-border-opacity:1;
+  border-color:rgba(var(--color-secondary-500), var(--tw-border-opacity))
+}
+
 .hover\:border-transparent:hover {
   border-color:transparent
 }
@@ -5172,11 +5191,6 @@ pre {
 
   .md\:text-7xl {
     font-size:4.5rem;
-    line-height:1
-  }
-
-  .md\:text-5xl {
-    font-size:3rem;
     line-height:1
   }
 

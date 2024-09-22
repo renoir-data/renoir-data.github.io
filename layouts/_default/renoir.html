@@ -21,8 +21,25 @@
 "context" $global ) }}
 {{ end }}
 
-<div class="flex mt-5">
-    <h1 class="text-5xl md:text-7xl font-bold my-5 text-left max-w-fit">Create your data masterpiece</h1>
+<div class="flex mt-5 justify-center">
+    <h1 class="text-5xl md:text-7xl font-bold my-5 text-left max-w-fit">Start Now</h1>
+</div>
+
+<div class="justify-center flex items-center self-center mb-4">
+    <div class="min-w-0 min-h-0 max-w-prose text-xl md:text-2xl font-normal text-justify text-neutral-300">
+        {{ with .Site.Data.renoir.info.start }}
+        {{ . | markdownify | safeHTML }}
+        {{ end }}
+    </div>
+</div>
+
+<div class="w-full text-center flex justify-center pb-12 mt-3">
+    <a
+        class=" transition-transform transform hover:scale-105  w-fit bg-black border-2 hover:border-primary-500 shadow-hover-renoir p-4 rounded-3xl text-xl font-bold" href="../book">
+        <span class="text-white">
+            Documentation
+        </span>
+    </a>
 </div>
 
 <div class="justify-center items-center">

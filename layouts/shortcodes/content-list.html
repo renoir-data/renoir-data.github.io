@@ -2,21 +2,22 @@
     {{ $currentPage := .Page }}
     {{ $section := $currentPage.Section -}}
     {{ range $currentPage.Sections.ByWeight -}}
-        {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-        <li class="sidebar-dropdown {{ if $active }}current active{{ end }}">
-            <button class="btn">
-                {{ .Title }}
-            </button>
-            <div class="sidebar-submenu {{ if $active }}d-block{{ end }}">
-                <ol>
-                    {{ range .Pages }}
-                        {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-                        <li class="{{ if $active }}current{{ end }}">
-                            <a class="sidebar-nested-link" href="{{ .Permalink }}">{{ .Title }}</a>
-                        </li>
-                    {{ end }}
-                </ol>
-            </div>
-        </li>
+    {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+    <li class="sidebar-dropdown {{ if $active }}current active{{ end }}">
+        <a class="hover:underline hover:decoration-primary-600" href="{{ .Permalink }}">
+            <span class="text-primary-600">{{ .Title }} </span>
+        </a>
+        <div class="sidebar-submenu {{ if $active }}d-block{{ end }}">
+            <ol>
+                {{ range .Pages }}
+                {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                <li class="{{ if $active }}current{{ end }}">
+                    <a class="sidebar-nested-link hover:underline hover:decoration-primary-400"
+                        href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+            </ol>
+        </div>
+    </li>
     {{ end }}
 </ol>

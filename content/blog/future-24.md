@@ -8,3 +8,4 @@ _build:
   render: "false"
 weight: 500
 ---
+"https://doi.org/10.1016/j.future.2024.06.018"

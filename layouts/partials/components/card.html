@@ -9,64 +9,67 @@
     {{ if ne $title "" }}
     <div class="p-3 items-center justify-center mb-6">
         <div class="text-4xl md:text-6xl font-bold text-center">
-            {{ $title | markdownify | safeHTML | replaceRE "<Logo>([\\s\\S]+?)</Logo>" "{{< logo >}}$1{{< /logo >}}"| markdownify | safeHTML | replaceRE "<Renoir>([\\s\\S]+?)</Renoir>" "{{< renoir >}}$1{{< /renoir >}}"| markdownify | safeHTML }}
+            {{ $title | markdownify | safeHTML | replaceRE "<Logo>([\\s\\S]+?)</Logo>" "{{< logo>}}$1{{< /logo>}}"|
+                    markdownify | safeHTML | replaceRE "<Renoir>([\\s\\S]+?)</Renoir>" "{{< renoir>}}$1{{< /renoir>}}"|
+                            markdownify | safeHTML }}
         </div>
     </div>
     {{ end }}
     <div class="relative justify-center flex z-10">
         {{ if eq $left false }}
         <div class="grid lg:max-w-7xl lg:grid-cols-2  glass-left rounded-3xl">
-        {{ else }}
-        <div class="grid lg:max-w-7xl lg:grid-cols-2  glass-right rounded-3xl">
-        {{ end }}
-            {{ if eq $left false }}
-            <div class="mx-auto max-w-xl p-12 order-2 lg:order-1">
-                <div class="relative">
-                    {{ $homepageImage := "" }}
-                    {{ with $img}}
-                    {{ $homepageImage = resources.Get . }}
-                    {{ end }}
-                    {{ if $homepageImage }}
-                    <img class="object-scale-down" src="{{ $homepageImage.RelPermalink }}" alt="test img">
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
-
-            <div class="max-w-2xl items-center content-center order-1">
-                <div class="p-3 my-12 w-full items-center justify-center flex relative">
-                    <div class="text-white max-w-lg text-center font-bold text-2xl">
-                            {{ $paragraph | markdownify | safeHTML }}
+            {{ else }}
+            <div class="grid lg:max-w-7xl lg:grid-cols-2  glass-right rounded-3xl">
+                {{ end }}
+                {{ if eq $left false }}
+                <div class="mx-auto max-w-xl p-12 order-2 lg:order-1">
+                    <div class="relative">
+                        {{ $homepageImage := "" }}
+                        {{ with $img}}
+                        {{ $homepageImage = resources.Get . }}
+                        {{ end }}
+                        {{ if $homepageImage }}
+                        <img class="object-scale-down" src="{{ $homepageImage.RelPermalink }}" alt="test img">
+                        {{ end }}
                     </div>
                 </div>
+                {{ end }}
+
+                <div class="max-w-2xl items-center content-center order-1">
+                    <div class="p-3 my-12 w-full items-center justify-center flex relative">
+                        <div class="text-white max-w-lg text-center font-bold text-2xl">
+                            {{ $paragraph | markdownify | safeHTML }}
+                        </div>
+                    </div>
                     {{ if eq $button "true" }}
                     <div class="w-full text-center flex justify-center pb-12">
-                        <a class=" transition-transform transform hover:scale-105  w-fit glass-black p-4 rounded-3xl text-xl font-bold">
-                            <span class="text-black">
+                        <a class=" transition-transform transform hover:scale-105  w-fit bg-black border-2 hover:border-primary-500 shadow-hover-renoir p-4 rounded-3xl text-xl font-bold"
+                            href="renoir">
+                            <span class="text-white">
                                 Explore Renoir
                             </span>
                         </a>
                     </div>
                     {{ end }}
-            </div>
-
-            {{ if eq $left true }}
-            <div class="mx-auto max-w-xl p-12 order-2">
-                <div class="relative">
-                    {{ $homepageImage := "" }}
-                    {{ with $img}}
-                    {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
-                    {{ $homepageImage = resources.GetRemote . }}
-                    {{ else }}
-                    {{ $homepageImage = resources.Get . }}
-                    {{ end }}
-                    {{ end }}
-                    {{ if $homepageImage }}
-                    <img class="object-scale-down" src="{{ $homepageImage.RelPermalink }}" alt="test img">
-                    {{ end }}
                 </div>
-            </div>
-            {{ end }}
+
+                {{ if eq $left true }}
+                <div class="mx-auto max-w-xl p-12 order-2">
+                    <div class="relative">
+                        {{ $homepageImage := "" }}
+                        {{ with $img}}
+                        {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+                        {{ $homepageImage = resources.GetRemote . }}
+                        {{ else }}
+                        {{ $homepageImage = resources.Get . }}
+                        {{ end }}
+                        {{ end }}
+                        {{ if $homepageImage }}
+                        <img class="object-scale-down" src="{{ $homepageImage.RelPermalink }}" alt="test img">
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
             </div>
         </div>
     </div>

@@ -8,6 +8,6 @@ description: "About renoir."
 
 <logo>We are Databrush</logo>
 
-Davide, Luca, Alessandro, Gianpaolo, and Fabio 
+Alessandro, Luca, Gianpaolo, Fabio and Davide
 
 <renoir>We develop Renoir</renoir>, an advanced tool for streaming data analytics, designed to help businesses make informed, real-time decisions

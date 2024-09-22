@@ -13,15 +13,10 @@
       <ul class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 justify-center">
         {{- range $posts -}}
         <li
-          class="card bg-white shadow-lg p-6 m-3 rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-green-100 max-w-md"
-        >
+          class="card bg-white shadow-lg p-6 m-3 rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-green-100 max-w-md">
           <a href="{{ .Permalink }}" class="block h-full">
             <div class="h-full flex flex-col">
-              <img
-                class="object-scale-down relative max-w-md"
-                src="image.webp"
-                alt="test img"
-              />
+              <!-- <img class="object-scale-down relative max-w-md" src="image.webp" alt="test img" /> -->
               <h3 class="text-lg font-semibold text-black text-center pt-3">
                 {{ .Params.title }}
               </h3>
@@ -33,10 +28,9 @@
       </ul>
     </div>
     <div class="w-full text-center flex justify-center mt-5">
-      <a
-        class="transition-transform transform hover:scale-105  w-fit glass-logo p-4 rounded-3xl text-xl font-bold"
-      >
-        <span class="text-black"> Read Our Blog </span>
+      <a class="transition-transform transform hover:scale-105  w-fit bg-black border-2 hover:border-secondary-500 shadow-hover-logo p-4 rounded-3xl text-xl font-bold"
+        href="blog">
+        <span class="text-white"> Read Our Blog </span>
       </a>
     </div>
   </div>

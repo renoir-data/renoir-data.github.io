@@ -7,4 +7,5 @@ toc: true
 tags: ["docs", "book"]
 weight: 200
 showAuthor: false
+layout: "list"
 ---

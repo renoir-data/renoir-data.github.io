@@ -58,18 +58,18 @@ smartTOCHideUnfocusedChildren = true
     "Create a <custom>Fast</custom>, <custom>Easy</custom>, <custom>Flexible</custom> and <custom>Efficient</custom> Data Infrastructure that grows with you"
   ]
   cards = [
-    { title = "Why <Logo>DataBrush</Logo>? <br> Let me introduce <Renoir>Renoir</Renoir>", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "black", left = true, img = "image.webp" },
-    { title = "", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "black", left = false, img = "image.webp" },
-    { title = "", paragraph = "Renoir a highly flexible framework that is able to connect the different components of your infrastructure and scale them on multiple machines.", bg = "black", left = true, img = "image.webp" }
+    { title = "Why <Logo>DataBrush</Logo>? <br> Let me introduce <Renoir>Renoir</Renoir>", paragraph = "Renoir is a distributed data processing platform that allows to analyse and manage huge ammount of data as soon as they are generated", bg = "black", left = true, img = "renoir_card_1.png", "button" = "true" },
+    { title = "", paragraph = "Renoir is created to be efficient allowing to work both in edge and in cloud environments", bg = "black", left = false, img = "renoir_card_2.png", "button" = "true"},
+    { title = "", paragraph = "Renoir is highly flexible allowing to easly integrate it in existing infrastructures", bg = "black", left = true, img = "renoir_card_3.png", "button" = "true" }
   ]
   blog = { title = "Not convinced yet? Read our Blog", folder = "publications" }
   aboutUs = [
     {title="How rude of us not to introduce ourselves"},
-    {name="Davide Canali", role="CEO", img="image.webp"},
-    {name="Luca De Martini", role="CTO", img="image.webp"},
-    {name="Alessandro Margara", role="Advisor", img="image.webp"},
-    {name="Gianpaolo Cugola", role="Advisor", img="image.webp"},
-    {name="Fabio Chini", role="Advisor", img="image.webp"},
+    {name="Davide Canali", role="CEO", img="canali.jpg"},
+    {name="Luca De Martini", role="CTO", img="demartini.jpg"},
+    {name="Alessandro Margara", role="Advisor", img="margara.jpg"},
+    {name="Gianpaolo Cugola", role="Advisor", img="cugola.jpg"},
+    {name="Fabio Chini", role="Advisor", img="chini.jpg"},
   ]
 
 

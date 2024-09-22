@@ -75,7 +75,7 @@
       </div> -->
       {{ $global := . }}
       {{ range .Site.Params.homepage.cards }}
-        {{ partial "components/card.html" (dict "left" .left "bg" .bg "title" .title "paragraph" .paragraph "img" .img "context" $global ) }}
+        {{ partial "components/card.html" ( dict "left" .left "bg" .bg "title" .title "paragraph" .paragraph "img" .img "button" .button "context" $global ) }}
       {{ end }}
       {{ $global := . }}
       {{ with .Site.Params.homepage.blog}}
