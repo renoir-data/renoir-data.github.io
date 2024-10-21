@@ -1752,6 +1752,10 @@ select {
   margin-left:2rem
 }
 
+.ml-10 {
+  margin-left:2.5rem
+}
+
 .box-content {
   box-sizing:content-box
 }
@@ -2024,6 +2028,10 @@ select {
 
 .max-w-7 {
   max-width:1.75rem
+}
+
+.max-w-5xl {
+  max-width:64rem
 }
 
 .flex-1 {
@@ -2656,6 +2664,10 @@ select {
   padding-left:1.25rem
 }
 
+.pl-1 {
+  padding-left:0.25rem
+}
+
 .text-left {
   text-align:left
 }
@@ -2865,6 +2877,16 @@ select {
   color:rgba(var(--color-neutral-100), var(--tw-text-opacity))
 }
 
+.text-primary-100 {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-primary-100), var(--tw-text-opacity))
+}
+
+.text-primary-200 {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-primary-200), var(--tw-text-opacity))
+}
+
 .underline {
   text-decoration-line:underline
 }
@@ -2879,6 +2901,38 @@ select {
 
 .decoration-primary-500 {
   text-decoration-color:rgba(var(--color-primary-500), 1)
+}
+
+.decoration-primary-600 {
+  text-decoration-color:rgba(var(--color-primary-600), 1)
+}
+
+.decoration-neutral-600 {
+  text-decoration-color:rgba(var(--color-neutral-600), 1)
+}
+
+.decoration-neutral-100 {
+  text-decoration-color:rgba(var(--color-neutral-100), 1)
+}
+
+.decoration-neutral-200 {
+  text-decoration-color:rgba(var(--color-neutral-200), 1)
+}
+
+.decoration-neutral-400 {
+  text-decoration-color:rgba(var(--color-neutral-400), 1)
+}
+
+.decoration-primary-400 {
+  text-decoration-color:rgba(var(--color-primary-400), 1)
+}
+
+.decoration-4 {
+  text-decoration-thickness:4px
+}
+
+.decoration-2 {
+  text-decoration-thickness:2px
 }
 
 .opacity-0 {
@@ -5320,6 +5374,14 @@ pre {
     margin-top:0px
   }
 
+  .lg\:ml-2 {
+    margin-left:0.5rem
+  }
+
+  .lg\:ml-5 {
+    margin-left:1.25rem
+  }
+
   .lg\:block {
     display:block
   }
@@ -5482,6 +5544,14 @@ pre {
   padding-right:1.25rem
 }
 
+.ltr\:pl-4:where([dir="ltr"], [dir="ltr"] *) {
+  padding-left:1rem
+}
+
+.ltr\:pl-2:where([dir="ltr"], [dir="ltr"] *) {
+  padding-left:0.5rem
+}
+
 .ltr\:text-right:where([dir="ltr"], [dir="ltr"] *) {
   text-align:right
 }
@@ -5499,6 +5569,10 @@ pre {
 @media (min-width: 1024px) {
   .ltr\:lg\:pl-8:where([dir="ltr"], [dir="ltr"] *) {
     padding-left:2rem
+  }
+
+  .ltr\:lg\:pl-2:where([dir="ltr"], [dir="ltr"] *) {
+    padding-left:0.5rem
   }
 }
 

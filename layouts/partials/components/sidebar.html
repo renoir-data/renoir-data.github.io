@@ -17,15 +17,14 @@
             <!-- Only check for children if the page is a section -->
             {{ if .IsSection }}
 
-            <li class="sub-menu{{if eq $currentPage.RelPermalink .RelPermalink }} active{{end}}">
-                <a href="{{.RelPermalink}}" class="text-primary-600">
+            <li class="sub-menu list-none">
+                <div class="text-neutral-50 font-bold ">
                     <span>{{ .Title }}</span>
-                    <span class="menu-arrow arrow_carrot-right"></span>
-                </a>
+                </div>
                 <ul class="sub">
                     {{ range .Pages }}
-                    <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="active" {{end}}>
-                        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+                    <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="underline decoration-primary-600 decoration-2" {{end}}>
+                        <a href="{{.RelPermalink}}" class="text-primary-300">{{ .Title }}</a>
             </li>
             {{ end }}
         </ul>
@@ -45,7 +44,7 @@
     </div>
     </details>
     <div id="sidebar"
-        class="nav-collapse py-2 border-dotted ltr:pr-3 ltr:border-r ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600 sticky hidden lg:block min-w-[270px]">
+        class="nav-collapse py-2 border-dotted ltr:pr-5 ltr:border-r ltr:pl-2 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600 sticky hidden lg:block min-w-[270px]">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
             {{ $currentPage := . }}
@@ -60,15 +59,14 @@
             <!-- Only check for children if the page is a section -->
             {{ if .IsSection }}
     
-            <li class="sub-menu{{if eq $currentPage.RelPermalink .RelPermalink }} active{{end}}">
-                <a href="{{.RelPermalink}}" class="text-primary-600">
+            <li class="sub-menu list-none">
+                <div class="text-neutral-50 font-bold ">
                     <span>{{ .Title }}</span>
-                    <span class="menu-arrow arrow_carrot-right"></span>
-                </a>
+                </div>
                 <ul class="sub">
                     {{ range .Pages }}
-                    <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="active" {{end}}>
-                        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+                    <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="underline decoration-primary-600 decoration-2" {{end}}>
+                        <a href="{{.RelPermalink}}" class="text-primary-300">{{ .Title }}</a>
             </li>
             {{ end }}
         </ul>

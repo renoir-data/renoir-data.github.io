@@ -3,20 +3,18 @@
     {{ $section := $currentPage.Section -}}
     {{ range $currentPage.Sections.ByWeight -}}
     {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-    <li class="sidebar-dropdown {{ if $active }}current active{{ end }}">
-        <a class="hover:underline hover:decoration-primary-600" href="{{ .Permalink }}">
-            <span class="text-primary-600">{{ .Title }} </span>
-        </a>
+    <li class="sidebar-dropdown ">
+        <div class="text-neutral-50 font-bold ">
+            <span>{{ .Title }}</span>
+        </div>
         <div class="sidebar-submenu {{ if $active }}d-block{{ end }}">
-            <ol>
-                {{ range .Pages }}
-                {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-                <li class="{{ if $active }}current{{ end }}">
-                    <a class="sidebar-nested-link hover:underline hover:decoration-primary-400"
-                        href="{{ .Permalink }}">{{ .Title }}</a>
-                </li>
-                {{ end }}
-            </ol>
+<ul class="sub">
+    {{ range .Pages }}
+    <li class="hover:underline decoration-primary-600 decoration-2" >
+        <a href="{{.RelPermalink}}" class="text-primary-300">{{ .Title }}</a>
+        </li>
+        {{ end }}
+</ul>
         </div>
     </li>
     {{ end }}
