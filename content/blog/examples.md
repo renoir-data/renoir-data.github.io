@@ -4,6 +4,8 @@ date: 2024-01-01
 draft: false
 summary: "Quick start guide to Renoir"
 tags: ["example"]
+showTableOfContents: true
+showBreadcrumbs: true
 ---
 
 

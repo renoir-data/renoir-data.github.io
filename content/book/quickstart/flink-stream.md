@@ -10,6 +10,8 @@ tags:
   - book
 weight: 200
 showAuthor: false
+showTableOfContents: true
+showBreadcrumbs: true
 ---
 
 > This guide assumes you have already set-up an environment for Renoir and created a cargo project following the [guide](../../install/install)

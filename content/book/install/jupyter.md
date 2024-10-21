@@ -6,6 +6,8 @@ description: "Installing the Jupyter Kernel to run Renoir in an interactive envi
 tags: ["docs", "book"]
 weight: 200
 showAuthor: false
+showTableOfContents: true
+showBreadcrumbs: true
 ---
 
 ## Prerequisites

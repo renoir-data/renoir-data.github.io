@@ -10,6 +10,8 @@ tags:
   - book
 weight: 100
 showAuthor: false
+showTableOfContents: true
+showBreadcrumbs: true
 ---
 >This is a quick start guide intended for people with some familiarity with the Rust programming language. It is intended as a jump start to get you writing Renoir programs quickly, but it is not complete, so refer to the rest of the documentation for more details.
 

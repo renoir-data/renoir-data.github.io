@@ -1,0 +1,90 @@
+<!-- sidebar start -->
+<aside>
+    <details class="lg:hidden pl-5 text-lg font-semibold cursor-pointer text-neutral-100 mt-0 rounded-lg mb-4">
+    <summary>Index</summary>
+    <div id="sidebar" class="nav-collapse py-2 border-dotted ltr:pr-3 ltr:border-r ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600 sticky">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+            {{ $currentPage := . }}
+
+            <!-- Fetch the "book" section -->
+            {{ $bookSection := .Site.GetPage "section" "book" }}
+
+            <!-- Ensure the section exists and has pages -->
+            {{ if $bookSection }}
+            {{ range $bookSection.Pages }}
+
+            <!-- Only check for children if the page is a section -->
+            {{ if .IsSection }}
+
+            <li class="sub-menu{{if eq $currentPage.RelPermalink .RelPermalink }} active{{end}}">
+                <a href="{{.RelPermalink}}" class="text-primary-600">
+                    <span>{{ .Title }}</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    {{ range .Pages }}
+                    <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="active" {{end}}>
+                        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        </li>
+
+        {{ else }}
+        <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="active" {{end}}>
+            <a href="{{ .RelPermalink }}">
+                <span>{{ .Title }}</span>
+            </a>
+            </li>
+            {{ end }}
+            {{ end }}
+            {{ else }}
+            <li>No pages found in the 'book' section</li>
+            {{ end }}
+    </div>
+    </details>
+    <div id="sidebar"
+        class="nav-collapse py-2 border-dotted ltr:pr-3 ltr:border-r ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600 sticky hidden lg:block min-w-[270px]">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+            {{ $currentPage := . }}
+    
+            <!-- Fetch the "book" section -->
+            {{ $bookSection := .Site.GetPage "section" "book" }}
+    
+            <!-- Ensure the section exists and has pages -->
+            {{ if $bookSection }}
+            {{ range $bookSection.Pages }}
+    
+            <!-- Only check for children if the page is a section -->
+            {{ if .IsSection }}
+    
+            <li class="sub-menu{{if eq $currentPage.RelPermalink .RelPermalink }} active{{end}}">
+                <a href="{{.RelPermalink}}" class="text-primary-600">
+                    <span>{{ .Title }}</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    {{ range .Pages }}
+                    <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="active" {{end}}>
+                        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        </li>
+    
+        {{ else }}
+        <li{{if eq $currentPage.RelPermalink .RelPermalink }} class="active" {{end}}>
+            <a href="{{ .RelPermalink }}">
+                <span>{{ .Title }}</span>
+            </a>
+            </li>
+            {{ end }}
+            {{ end }}
+            {{ else }}
+            <li>No pages found in the 'book' section</li>
+            {{ end }}
+    </div>
+</aside>
+<!-- sidebar end -->

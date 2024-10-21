@@ -8,7 +8,6 @@ toc: true
 tags: ["docs", "book"]
 weight: 100
 showAuthor: false
-layout: "book" 
 ---
 
 This book serves as a quick start guide and documentation for installing and writing Renoir programs.

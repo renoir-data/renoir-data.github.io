@@ -6,9 +6,11 @@ description: "Installing and creating a Renoir project"
 tags: ["docs", "book"]
 weight: 100
 showAuthor: false
+showTableOfContents: true
+showBreadcrumbs: true
 ---
 
-The first requirement for building a Renoir project is the Rust toolchain.
+The first requirement for building a Renoir project is the **Rust** toolchain.
 
 ## Installing Rust
 
@@ -18,12 +20,13 @@ The first requirement for building a Renoir project is the Rust toolchain.
 + **Using your package manager**: in alternative you can use the package provided by your repository
 
 ## Add rust toolchain to PATH
-
+In order to use all the tools of the Rust toolchain we need to add the "~/.cargo/bin/" folder in our PATH
 + **bash**: `echo 'export PATH=$PATH:~/.cargo/bin/' >> ~/.bashrc`
 + **fish**: `set -xU fish_user_paths $fish_user_paths ~/.cargo/bin/`
 
 ## Create a new cargo project
-
+After we succesfully installed the Rust toolchain we are ready to create wonders with **Renoir**.
+To do that we are going to create a new project adding **Renoir** to its dependencies.
 ```sh
 cargo new --bin renoir-test
 cd renoir-test
