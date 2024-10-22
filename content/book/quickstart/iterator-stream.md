@@ -52,7 +52,9 @@ Every Renoir `Stream` lives within a `StreamContext`. The context can contain mu
 > Or it is also possible to use the asynchronous `StreamContext::execute()` method if the `tokio` feature is enabled. Note: for performance reasons, only some parts of the system are executed on the asynchronous scheduler when the feature is enabled, while most operators run on separate threads.
 
 ## From Iterators to Streams
+Now we will see how easy it is to move from an iterator to a stream.
 
+We want to create a stream that takes a range of numbers from 0 to 200, filters the numbers that are divisible by 3 or 5, multiplies them by 2 and collects the result into a vector.
 ```rust
 // With iterators
 fn main() {
@@ -64,13 +66,13 @@ fn main() {
 	println!("{output:?}");
 }
 ```
-
+With **Renoir**, we just need to create a context, create a stream from the iterator and apply the same operators.
 ```rust
 // With renoir
 use renoir::prelude::*;
 fn main() {
 	let ctx = StreamContext::new_local();
-	let input = 0..100;
+	let input = 0..200;
 
 	// We are streaming the iterator from our machine
 	let output = ctx.stream_iter(input)
@@ -87,6 +89,9 @@ fn main() {
 	}
 }
 ```
+
+With **Renoir**, we can easily move from a single-threaded iterator to a parallel and distributed stream by just changing a few lines and cutting down the execution time to a fraction of the original.
+
 ### Distributing the data
 
 In the previous example, we used a single node deployment (`StreamContext::new_local()`) and we used the `IteratorSource`, which takes as input an iterator from the **first node** in the deployment and feeds its elements into a stream.
@@ -118,8 +123,32 @@ After applying a grouping operator, the `Stream` will become a `KeyedStream` tha
 ```rust
 let output = ctx.stream_iter(input)
 	.group_by(|x| x / 10)
-	.filter(|x| x % 3 == 0 || x % 5 == 0)
-	.map(|x| x * 2)
+	.filter(|(_key, x)| x % 3 == 0 || x % 5 == 0)
+	.map(|(_key, x)| x * 2)
 	.collect_vec();
 // Note: the output of this example is different from the previous
+```
+
+#### Parallel Source
+
+Another way to distribute the data is to use a parallel source. Using this source Renoir will create a numeber of replicas of the source and execute them in parallel.
+
+In the following example, we distribute the range of numbers between the different cores making the whole computation parallel.
+
+```rust
+let n = 200;
+ctx.stream_par_iter(
+	    move |id, instances| {
+	        let chunk_size = (n + instances - 1) / instances;
+        let remaining = n - n.min(chunk_size * id);
+        let range = remaining.min(chunk_size);
+
+        let start = id * chunk_size;
+        let stop = id * chunk_size + range;
+        start..stop
+    })
+   	.group_by(|x| x / 10)
+	.filter(|(_key, x)| x % 3 == 0 || x % 5 == 0)
+	.map(|(_key, x)| x * 2)
+	.collect_vec();
 ```

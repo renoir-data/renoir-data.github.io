@@ -17,10 +17,10 @@ This book serves as a quick start guide and documentation for installing and wri
 <!-- 
 - Installing and creating a Renoir project]
 - Quick start
-    - From Iterators to Streams
-    - Going parallel
+    - From Iterators to Streams          \\
+    - Going parallel                     \\
 - Operator showcase
-    - Sequential transformations
+    - Sequential transformations         
     - Group by and partitioning
     - Reductions and folds
     - Windows
