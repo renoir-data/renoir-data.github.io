@@ -20,10 +20,10 @@ This book serves as a quick start guide and documentation for installing and wri
     - From Iterators to Streams          \\
     - Going parallel                     \\
 - Operator showcase
-    - Sequential transformations         
-    - Group by and partitioning
-    - Reductions and folds
-    - Windows
+    - Sequential transformations         \\
+    - Group by and partitioning          \\
+    - Reductions and folds               \\
+    - Windows                            
     - Event timestamps
     - Multi-stream operators
     - Iterative operatios
