@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<article>
+
+    <div class="p-3 items-center justify-center mb-6">
+        <div class="text-4xl md:text-6xl font-bold text-center">
+            {{ .Title | emojify }}
+        </div>
+
+        <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row justify-center">
+            <div class="justify-center">
+                <div class="article-content max-w-prose mb-20 text-center text-2xl font-bold mt-4">
+                    {{ .Content }}
+                </div>
+            </div>
+        </section>
+</article>
+{{ end }}
+

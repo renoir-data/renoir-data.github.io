@@ -7,7 +7,7 @@ toc: true
 tags:
  - docs
  - book
-weight: 110
+weight: 120
 showAuthor: false
 showTableOfContents: true
 showBreadcrumbs: true

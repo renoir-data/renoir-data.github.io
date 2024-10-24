@@ -231,3 +231,7 @@ transition: box-shadow 0.2s ease;
 .shadow-hover-renoir:hover {
   box-shadow: 0px 0px 15px rgb(var(--color-primary-500));
 }
+
+html {
+  font-size: 100%;
+}

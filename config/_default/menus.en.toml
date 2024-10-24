@@ -20,6 +20,13 @@
  pageRef = "/blog"
  weight = 40
 
+
+[[main]]
+ name = "Contact"
+ pageRef = "/contact"
+ weight = 40
+
+
 [[main]]
  name = "Renoir"
  pageRef = "/renoir"
