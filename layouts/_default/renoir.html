@@ -21,8 +21,34 @@
 "context" $global ) }}
 {{ end }}
 
+<!-- Features -->
+<div class="flex mt-5 items-center justify-center">
+    <h1 class="text-4xl md:text-6xl font-bold my-5 text-center max-w-fit justify-center">Features</h1>
+</div>
+
+{{ partial "components/conn-rect.html" (dict "first" true "last" false "text_left" "Describe the Environment where your application will run" "text_center" "Environment" "text_right" "**Renoir** will take care of utilizing the resources at best") }}
+{{ partial "components/conn-rect.html" (dict "first" false "last" false "text_left" "Connect to your data wherever they are " "text_center" "Data" "text_right" "**Renoir** is customizable to adapt to your infrastracture") }}
+{{ partial "components/conn-rect.html" (dict "first" false "last" false "text_left" "Attach the operators that you need to manage, transform and analyse your data" "text_center" "Operators" "text_right" "**Renoir** offers a vast set of tools allowing you to obtain everything you want from your data") }}
+{{ partial "components/conn-rect.html" (dict "first" false "last" true "text_left" "Send the insight that you obtain where they are needed the most" "text_center" "Results" "text_right" "**Renoir** offers the ability to manage the results of your analysis however you want") }}
+
+<!-- Performance -->
+<div class="flex justify-center items-center">
+    <h1 class="text-4xl md:text-5xl font-bold my-5 text-center max-w-fit justify-center">Performance</h1>
+</div>
+
+{{ partial "components/performance.html" (dict "img1" "image1.jpg" "img2" "image2.jpg" "text1" "Text under the left image"
+"text2" "Text under the right image") }}
+
+
+<!-- Awards -->
+<div class="flex justify-center items-center">
+    <h1 class="text-4xl md:text-5xl font-bold my-5 text-center max-w-fit justify-center">Awards</h1>
+</div>
+
+{{ partial "components/award.html" (dict "img1" "image1.jpg" "img2" "image2.jpg" "text1" "Text under the left image" "text2" "Text under the right image") }}
+
 <div class="flex mt-5 justify-center">
-    <h1 class="text-5xl md:text-7xl font-bold my-5 text-left max-w-fit">Start Now</h1>
+    <h1 class="text-4xl md:text-7xl font-bold my-5 text-left max-w-fit">Start Now</h1>
 </div>
 
 <div class="justify-center flex items-center self-center mb-4">

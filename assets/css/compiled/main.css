@@ -1549,11 +1549,6 @@ select {
   margin-bottom:0px
 }
 
-.my-12 {
-  margin-top:3rem;
-  margin-bottom:3rem
-}
-
 .my-3 {
   margin-top:0.75rem;
   margin-bottom:0.75rem
@@ -1562,6 +1557,11 @@ select {
 .my-5 {
   margin-top:1.25rem;
   margin-bottom:1.25rem
+}
+
+.my-6 {
+  margin-top:1.5rem;
+  margin-bottom:1.5rem
 }
 
 .\!mb-0 {
@@ -1872,8 +1872,20 @@ select {
   width:1px !important
 }
 
+.w-1\/2 {
+  width:50%
+}
+
+.w-1\/3 {
+  width:33.333333%
+}
+
 .w-12 {
   width:3rem
+}
+
+.w-2\/5 {
+  width:40%
 }
 
 .w-24 {
@@ -2115,6 +2127,10 @@ select {
   gap:2.5rem
 }
 
+.gap-2 {
+  gap:0.5rem
+}
+
 .gap-4 {
   gap:1rem
 }
@@ -2237,9 +2253,19 @@ select {
   border-radius:0.75rem
 }
 
+.rounded-b-full {
+  border-bottom-right-radius:9999px;
+  border-bottom-left-radius:9999px
+}
+
 .rounded-b-lg {
   border-bottom-right-radius:0.5rem;
   border-bottom-left-radius:0.5rem
+}
+
+.rounded-t-full {
+  border-top-left-radius:9999px;
+  border-top-right-radius:9999px
 }
 
 .\!border-0 {
@@ -2263,12 +2289,24 @@ select {
   border-bottom-width:10px
 }
 
+.border-l {
+  border-left-width:1px
+}
+
 .border-l-2 {
   border-left-width:2px
 }
 
+.border-r {
+  border-right-width:1px
+}
+
 .border-t {
   border-top-width:1px
+}
+
+.border-t-4 {
+  border-top-width:4px
 }
 
 .border-solid {
@@ -2470,10 +2508,6 @@ select {
   padding:0.375rem
 }
 
-.p-12 {
-  padding:3rem
-}
-
 .p-3 {
   padding:0.75rem
 }
@@ -2595,8 +2629,16 @@ select {
   padding-bottom:1rem
 }
 
+.pb-6 {
+  padding-bottom:1.5rem
+}
+
 .pl-2 {
   padding-left:0.5rem
+}
+
+.pl-3 {
+  padding-left:0.75rem
 }
 
 .pl-5 {
@@ -2605,6 +2647,10 @@ select {
 
 .pl-\[24px\] {
   padding-left:24px
+}
+
+.pr-3 {
+  padding-right:0.75rem
 }
 
 .pr-\[24px\] {
@@ -2625,6 +2671,10 @@ select {
 
 .pt-4 {
   padding-top:1rem
+}
+
+.pt-6 {
+  padding-top:1.5rem
 }
 
 .pt-8 {
@@ -2904,10 +2954,26 @@ select {
   box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
+.shadow-md {
+  --tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
 .shadow-xl {
   --tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.shadow-primary-500 {
+  --tw-shadow-color:rgba(var(--color-primary-500), 1);
+  --tw-shadow:var(--tw-shadow-colored)
+}
+
+.grayscale {
+  --tw-grayscale:grayscale(100%);
+  filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
 .filter {
@@ -2954,6 +3020,10 @@ select {
 
 .duration-150 {
   transition-duration:150ms
+}
+
+.duration-300 {
+  transition-duration:300ms
 }
 
 .duration-\[600ms\] {
@@ -3030,6 +3100,14 @@ select {
 
 .\!\[clip\:rect\(0\2c 0\2c 0\2c 0\)\] {
   clip:rect(0,0,0,0) !important
+}
+
+.\[transform-style\:preserve-3d\] {
+  transform-style:preserve-3d
+}
+
+.\[transform\:rotateY\(180deg\)\] {
+  transform:rotateY(180deg)
 }
 
 body a,
@@ -5068,11 +5146,25 @@ pre {
   .max-sm\:hidden {
     display:none
   }
+
+  @keyframes pulse {
+    50% {
+      opacity:.5
+    }
+  }
+
+  .max-sm\:animate-pulse {
+    animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite
+  }
 }
 
 @media (min-width: 640px) {
   .sm\:mb-0 {
     margin-bottom:0px
+  }
+
+  .sm\:mt-0 {
+    margin-top:0px
   }
 
   .sm\:mt-16 {
@@ -5087,6 +5179,10 @@ pre {
     width:50%
   }
 
+  .sm\:w-2\/3 {
+    width:66.666667%
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns:repeat(2, minmax(0, 1fr))
   }
@@ -5095,8 +5191,16 @@ pre {
     flex-direction:row
   }
 
+  .sm\:flex-col {
+    flex-direction:column
+  }
+
   .sm\:overflow-hidden {
     overflow:hidden
+  }
+
+  .sm\:border-l-2 {
+    border-left-width:2px
   }
 
   .sm\:p-6 {
@@ -5116,6 +5220,14 @@ pre {
   .sm\:py-24 {
     padding-top:6rem;
     padding-bottom:6rem
+  }
+
+  .sm\:pl-3 {
+    padding-left:0.75rem
+  }
+
+  .sm\:text-left {
+    text-align:left
   }
 
   .sm\:text-lg {
@@ -5139,6 +5251,10 @@ pre {
 
   .md\:mt-0 {
     margin-top:0px
+  }
+
+  .md\:block {
+    display:block
   }
 
   .md\:flex {
@@ -5177,6 +5293,10 @@ pre {
     grid-template-columns:repeat(3, minmax(0, 1fr))
   }
 
+  .md\:flex-row {
+    flex-direction:row
+  }
+
   .md\:justify-start {
     justify-content:flex-start
   }
@@ -5198,6 +5318,11 @@ pre {
   .md\:text-4xl {
     font-size:2.25rem;
     line-height:2.5rem
+  }
+
+  .md\:text-5xl {
+    font-size:3rem;
+    line-height:1
   }
 
   .md\:text-6xl {

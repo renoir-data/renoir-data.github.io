@@ -22,7 +22,7 @@
             <div class="grid lg:max-w-7xl lg:grid-cols-2  glass-right rounded-3xl">
                 {{ end }}
                 {{ if eq $left false }}
-                <div class="mx-auto max-w-xl p-12 order-2 lg:order-1">
+                <div class="mx-auto max-w-xl p-6 order-2 lg:order-1">
                     <div class="relative">
                         {{ $homepageImage := "" }}
                         {{ with $img}}
@@ -36,13 +36,13 @@
                 {{ end }}
 
                 <div class="max-w-2xl items-center content-center order-1">
-                    <div class="p-3 my-12 w-full items-center justify-center flex relative">
+                    <div class="p-3 my-6 w-full items-center justify-center flex relative">
                         <div class="text-white max-w-lg text-center font-bold text-2xl">
                             {{ $paragraph | markdownify | safeHTML }}
                         </div>
                     </div>
                     {{ if eq $button "true" }}
-                    <div class="w-full text-center flex justify-center pb-12">
+                    <div class="w-full text-center flex justify-center pb-6">
                         <a class=" transition-transform transform hover:scale-105  w-fit bg-black border-2 hover:border-primary-500 shadow-hover-renoir p-4 rounded-3xl text-xl font-bold"
                             href="renoir">
                             <span class="text-white">
@@ -54,7 +54,7 @@
                 </div>
 
                 {{ if eq $left true }}
-                <div class="mx-auto max-w-xl p-12 order-2">
+                <div class="mx-auto max-w-xl p-6 order-2">
                     <div class="relative">
                         {{ $homepageImage := "" }}
                         {{ with $img}}
