@@ -23,9 +23,9 @@ This book serves as a quick start guide and documentation for installing and wri
     - Sequential transformations         \\
     - Group by and partitioning          \\
     - Reductions and folds               \\
-    - Windows                            
-    - Event timestamps
-    - Multi-stream operators
+    - Windows                            \\
+    - Event timestamps                   ??
+    - Multi-stream operators             \\
     - Iterative operatios
 - Deploying on multiple hosts
     - Clap and renoir.toml
