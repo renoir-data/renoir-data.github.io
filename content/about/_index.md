@@ -1,5 +1,5 @@
 ---
-title: "About Us"
+title: "Contact"
 layout: "about-us"
 date: 2024-05-28
 draft: false

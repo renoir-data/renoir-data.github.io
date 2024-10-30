@@ -21,10 +21,10 @@
  weight = 40
 
 
-[[main]]
- name = "Contact"
- pageRef = "/contact"
- weight = 40
+# [[main]]
+#  name = "Contact"
+#  pageRef = "/contact"
+#  weight = 40
 
 
 [[main]]
@@ -33,7 +33,7 @@
  weight = 10
 
 [[main]]
- name = "About Us"
+ name = "Contact"
  pageRef = "/about"
  weight = 50
 

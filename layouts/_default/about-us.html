@@ -19,11 +19,24 @@
 
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row justify-center">
     <div class="justify-center">
-      <div class="article-content max-w-prose mb-20 text-center text-2xl font-bold mt-4">
+      <div class="article-content max-w-prose text-center text-2xl font-bold mt-4">
         {{ .Content | safeHTML | replaceRE "<custom>([\\s\\S]+?)</custom>" "{{< custom >}}$1{{< /custom >}}" | replaceRE "<renoir>([\\s\\S]+?)</renoir>" "{{< renoir >}}$1{{< /renoir >}}" | replaceRE "<logo>([\\s\\S]+?)</logo>" "{{< logo >}}$1{{< /logo >}}"|markdownify | safeHTML  }}
       </div>
+
+
     </div>
   </section>
+  <!-- a button that link to our email -->
+  <div class="w-full text-center flex justify-center pb-6 mt-4">
+    <a class=" transition-transform transform hover:scale-105  w-fit bg-black border-2 hover:border-secondary-500 shadow-hover-logo p-4 rounded-3xl text-xl font-bold"
+      href="mailto:canali.davide99@gmail.com">
+      <span class="text-white">
+        Contact Us
+      </span>
+    </a>
+  </div>
+
+
 
 </article>
 {{ end }}

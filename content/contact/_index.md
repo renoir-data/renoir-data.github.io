@@ -3,6 +3,8 @@ title: "Contact"
 date: "2020-02-25"
 draft: false
 layout: "contact"
+build:
+  render: false
 ---
 You can contact us here!
 
