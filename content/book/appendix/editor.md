@@ -1,7 +1,7 @@
 ---
 title: "Tips: Suggested Development Environment"
 date: 2024-06-15
-draft: true
+draft: false
 description: "Suggested Development Environment"
 tags: ["docs", "book"]
 weight: 100
