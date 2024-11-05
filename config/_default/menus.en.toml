@@ -26,6 +26,10 @@
 #  pageRef = "/contact"
 #  weight = 40
 
+[[main]]
+ name = "Roadmap"
+ pageRef = "/roadmap"
+ weight = 40
 
 [[main]]
  name = "Renoir"

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="flex justify-center items-center">
+    <h1 class="text-5xl md:text-9xl font-bold my-5 text-center gradient-logo">{{ .Title }}</h1>
+</div>
+
+<div class="justify-center flex items-center self-center mb-8">
+    <div class="min-w-0 min-h-0 max-w-prose text-xl md:text-2xl font-normal text-justify text-neutral-300">
+        {{.Content}}
+    </div>
+</div>
+
+{{ partial "components/roadmap.html" . }}
+
+{{ end }}
