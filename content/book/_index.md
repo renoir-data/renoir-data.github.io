@@ -26,7 +26,7 @@ This book serves as a quick start guide and documentation for installing and wri
     - Windows                            \\
     - Event timestamps                   ??
     - Multi-stream operators             \\
-    - Iterative operatios
+    - Iterative operatios                \\
 - Deploying on multiple hosts
     - Clap and renoir.toml
     - Programmatic config
