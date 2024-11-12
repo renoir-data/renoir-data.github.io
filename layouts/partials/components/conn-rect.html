@@ -6,7 +6,7 @@
 {{ $text_right := .text_right }}
 <div class="flex gap-4 justify-center items-center sm:flex-col md:flex-row">
     <!-- Left Column -->
-    <div class="w-1/2 md:w-1/3 justify-center md:block hidden sm:hidden" id="leftText" data-aos="fade-right">
+    <div class="w-1/2 md:w-1/3 justify-center md:block hidden sm:hidden" id="leftText">
         <p class="self-center text-center pr-3 border-r glass-right py-2">
             {{ $text_left | markdownify | safeHTML }}
         </p>
@@ -34,7 +34,7 @@
 
     <!-- Right Column -->
     <div class="w-1/3 hidden justify-center md:flex">
-        <p class="self-center text-center pl-3 border-l glass-left py-2" data-aos="fade-left">
+        <p class="self-center text-center pl-3 border-l glass-left py-2">
             {{ $text_right | markdownify | safeHTML }}
         </p>
     </div>
