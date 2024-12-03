@@ -58,7 +58,7 @@ smartTOCHideUnfocusedChildren = true
     "Create a <custom>Fast</custom>, <custom>Easy</custom>, <custom>Flexible</custom> and <custom>Efficient</custom> Data Infrastructure that grows with you"
   ]
   landing = [
-    { title = "Why <Logo>DataBrush</Logo>? <br> Let me introduce <Renoir>Renoir</Renoir> <br><br> How much do you value your time?", paragraph = "\"We spent an entire month just to make our code distributed so that it can be ready for production.\" <br>With Renoir we would already be on the market", bg = "black", left = true, img = "card_1.svg", "button" = "true" },
+    { title = "Why <Logo>DataBrush</Logo>? <br> Let me introduce <Renoir>Renoir</Renoir> <br><br> How much do you value your time?", paragraph = "\"We spent an entire month just to make our code distributed so that it could be ready for production.\" <br>With Renoir we would already be on the market", bg = "black", left = true, img = "card_1.svg", "button" = "true" },
     { title = "", paragraph = "\"We need to manually connect to our edge devices to load, modify or maintain our workflow.\" <br>With Renoir will be done in just a click", bg = "black", left = false, img = "card_2.svg", "button" = "true"},
     { title = "", paragraph = "\"We don't know for how long our infrastructure will be enough and adding a new server is always tedious.\" <br>With Renoir we will be much more at ease", bg = "black", left = true, img = "card_3.svg", "button" = "true" }
   ]
