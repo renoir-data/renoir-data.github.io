@@ -5,7 +5,7 @@
 
   "cards": [
     {
-      "paragraph": "Renoir is a distributed data processing platform that allows to analyse and manage huge ammount of data as soon as they are generated",
+      "paragraph": "Renoir is a distributed data processing platform that allows to analyse and manage huge amount of data as soon as they are generated",
       "left": true,
       "img": "renoir_card_1.png"
     },
