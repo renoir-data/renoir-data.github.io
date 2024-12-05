@@ -25,18 +25,25 @@
 
 
     </div>
-  </section>
-  <!-- a button that link to our email -->
-  <div class="w-full text-center flex justify-center pb-6 mt-4">
-    <a class=" transition-transform transform hover:scale-105  w-fit bg-black border-2 hover:border-secondary-500 shadow-hover-logo p-4 rounded-3xl text-xl font-bold"
-      href="mailto:info@databrush.it">
-      <span class="text-white">
-        Contact Us
-      </span>
-    </a>
+
+    </section>
+    <div class="flex justify-center pt-4">
+    <div class="flex flex-col items-center mt-6"></div>
+      <form action="https://formspree.io/f/xyzyvkzw" method="POST" class="w-full max-w-lg">
+      <div class="flex flex-col mb-4">
+        <label class="mb-2 text-xl font-bold " for="email">Your email:</label>
+        <input class="border py-2 px-3 text-black font-bold border-primary-500 shadow-renoir border-2" type="email" name="email" id="email" required>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="mb-2 text-xl font-bold" for="message">Your message:</label>
+        <textarea class="border py-2 px-3 text-black font-bold border-primary-500 shadow-renoir border-2" name="message" id="message" rows="5" required></textarea>
+      </div>
+      <!-- your other form fields go here -->
+      <div class="flex justify-center">
+        <button class="transition-transform transform hover:scale-105 w-1/3 bg-black border-2 hover:border-primary-500 shadow-hover-renoir p-4 rounded-3xl text-2xl font-bold" type="submit">Send</button>
+      </div>
+      </form>
+    </div>
   </div>
-
-
-
 </article>
 {{ end }}
